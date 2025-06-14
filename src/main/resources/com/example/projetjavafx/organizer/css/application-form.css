@@ -1,0 +1,57 @@
+/* Main styling */
+.root {
+    -fx-background-color: #ffffff;
+    -fx-font-family: 'Segoe UI', sans-serif;
+}
+
+/* Form title */
+.form-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1c2b5d; /* biscay */
+}
+
+/* Form labels */
+.form-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #1c2b5d; /* biscay */
+    -fx-font-weight: 500;
+}
+
+/* Form fields */
+.form-field {
+    -fx-pref-height: 35px;
+    -fx-pref-width: 300px;
+    -fx-font-size: 14px;
+    -fx-padding: 5px 10px;
+    -fx-background-radius: 4px;
+    -fx-border-color: #cabfbe; /* silver-rust */
+    -fx-border-radius: 4px;
+}
+
+/* Browse button */
+.browse-button {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-padding: 8px 15px;
+    -fx-background-radius: 4px;
+    -fx-cursor: hand;
+}
+
+.browse-button:hover {
+    -fx-background-color: #2c3e50;
+}
+
+/* Submit button */
+.submit-button {
+    -fx-background-color: #1e298f; /* jacksons-purple */
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-padding: 12px 40px;
+    -fx-background-radius: 4px;
+    -fx-cursor: hand;
+}
+
+.submit-button:hover {
+    -fx-background-color: #2a38b3;
+}

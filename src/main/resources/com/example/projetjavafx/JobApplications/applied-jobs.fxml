@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane prefHeight="1050" prefWidth="1920" stylesheets="@css/ApplicationsReview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetjavafx.root.jobApplications.AppliedJobsController">
+    <left>
+        <VBox id="sidebar" prefHeight="979.0" prefWidth="250.0" spacing="10">
+            <Button fx:id="homeButton" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="228.0" text="Home" />
+            <Button fx:id="dashboardButton" onAction="#onDashboardClick" prefHeight="40.0" prefWidth="332.0" styleClass="nav-button" text="Dashboard" />
+            <Button fx:id="jobFeedButton" onAction="#onJobFeedButtonClick" prefHeight="40.0" prefWidth="246.0" styleClass="nav-button" text="Job Feed" />
+            <Button fx:id="jobApplicationsButton" onAction="#onJobApplicationsButtonClick" prefHeight="40.0" prefWidth="225.0" styleClass="nav-button" text="Job Applications" />
+            <Button fx:id="createJobButton" onAction="#onCreateJobButtonClick" prefHeight="40.0" prefWidth="299.0" styleClass="nav-button" text="CreateJob" />
+            <Button fx:id="eventsButton" mnemonicParsing="false" onAction="#onEventsClick" prefHeight="40.0" prefWidth="227.0" text="Events" />
+            <Button fx:id="analyticsButton" mnemonicParsing="false" onAction="#onAnalyticsClick" prefHeight="40.0" prefWidth="224.0" text="Analytics" />
+        </VBox>
+    </left>
+    <center>
+        <VBox id="contentContainer" spacing="10">
+            <!-- Jobs Section -->
+            <Label id="pageTitle" text="Jobs You Applied For" />
+            <TableView fx:id="jobsTable">
+                <columns>
+                    <TableColumn fx:id="jobIdColumn" text="Job ID" />
+                    <TableColumn fx:id="jobTitleColumn" text="Job Title" />
+                    <TableColumn fx:id="eventTitleColumn" text="Event Title" />
+                    <TableColumn fx:id="jobLocationColumn" text="Location" />
+                    <TableColumn fx:id="applicationDeadlineColumn" text="Deadline" />
+                    <TableColumn fx:id="recruiterColumn" text="Recruiter" />
+                    <TableColumn fx:id="actionColumn" text="Action" />
+                </columns>
+            </TableView>
+
+            <!-- Events Section -->
+            <Separator prefHeight="20"/>
+            <Label text="Events You Participated In" />
+            <TableView fx:id="eventsTable">
+                <columns>
+                    <TableColumn fx:id="eventNameColumn" text="Event Name" />
+                    <TableColumn fx:id="eventLocationColumn" text="Location" />
+                    <TableColumn fx:id="startDateColumn" text="Start Date" />
+                    <TableColumn fx:id="endDateColumn" text="End Date" />
+                    <TableColumn fx:id="cancelColumn" text="Action" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

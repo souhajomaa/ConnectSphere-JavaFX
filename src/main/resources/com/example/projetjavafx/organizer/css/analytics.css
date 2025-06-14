@@ -1,0 +1,176 @@
+/* Main color palette */
+.root {
+    -fx-background-color: #ffffff;
+    -fx-accent: #1e298f; /* jacksons-purple */
+    -fx-font-family: 'Segue UI', sans-serif;
+}
+
+/* Top Bar Styling */
+#topBar {
+    -fx-background-color: #1c2b5d; /* biscay */
+    -fx-padding: 15px;
+    -fx-border-color: #8989ba; /* wild-blue yonder */
+    -fx-border-width: 0 0 1px 0;
+}
+
+#appTitle {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: 600;
+}
+
+/* Auth Buttons */
+.auth-button {
+    -fx-background-color: #d54d67; /* cabaret */
+    -fx-text-fill: white;
+    -fx-background-radius: 4px;
+    -fx-padding: 8px 20px;
+    -fx-font-size: 14px;
+}
+
+.auth-button:hover {
+    -fx-background-color: #b34158;
+}
+
+/* Sidebar Styling */
+#sidebar {
+    -fx-background-color: #1c2b5d; /* biscay */
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+    -fx-border-color: #8989ba; /* wild-blue yonder */
+    -fx-border-width: 0 1px 0 0;
+    -fx-pref-width: 250px;
+}
+
+/* Navigation Buttons */
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white !important; /* Force text color */
+    -fx-font-size: 14px;
+    -fx-padding: 0 15px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-border-width: 0 0 0 3px;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+    -fx-pref-height: 38px;
+    -fx-min-width: 250px;
+    -fx-transition: all 0.2s;
+}
+
+/* Hover state */
+.nav-button:hover {
+    -fx-background-color: #1e298f30; /* jacksons-purple with 30% opacity */
+    -fx-border-color: #8989ba; /* wild-blue yonder */
+}
+
+/* Active state */
+.nav-button:armed {
+    -fx-background-color: #1e298f60; /* darker active state */
+}
+
+.primary-action {
+    -fx-background-color: #1e298f; /* jacksons-purple */
+    -fx-text-fill: white;
+    -fx-background-radius: 4px;
+}
+
+/* Main Content Area */
+#mainContent {
+    -fx-padding: 40px;
+    -fx-background-color: #f8f9fa;
+}
+
+#heroTitle {
+    -fx-text-fill: #1c2b5d; /* biscay */
+    -fx-font-size: 32px;
+    -fx-font-weight: 700;
+    -fx-wrap-text: true;
+    -fx-text-alignment: center;
+}
+
+#heroSubtitle {
+    -fx-text-fill: #6a6a5a; /* kokoda */
+    -fx-font-size: 18px;
+    -fx-padding: 10px 0 20px 0;
+}
+
+/* Feature Cards */
+.feature-card {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-border-color: #cabfbe; /* silver-rust */
+    -fx-border-width: 1px;
+    -fx-padding: 20px;
+    -fx-spacing: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(28,43,93,0.05), 6, 0, 1, 2);
+    -fx-min-width: 280px;
+    -fx-alignment: CENTER;
+}
+
+.feature-title {
+    -fx-text-fill: #1c2b5d; /* biscay */
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+}
+
+.feature-description {
+    -fx-text-fill: #6a6a5a; /* kokoda */
+    -fx-font-size: 14px;
+    -fx-wrap-text: true;
+    -fx-text-alignment: center;
+}
+
+/* Action Buttons */
+.action-button {
+    -fx-background-color: #1e298f; /* jacksons-purple */
+    -fx-text-fill: white;
+    -fx-background-radius: 4px;
+    -fx-padding: 12px 30px;
+    -fx-font-size: 14px;
+}
+
+.action-button:hover {
+    -fx-background-color: #2a38b3;
+}
+
+/* Charts Container Styling (if needed) */
+#charts-container {
+    -fx-padding: 20px;
+}
+
+/* Additional Chart Styling (if needed) */
+.chart-title {
+    -fx-font-size: 16px;
+    -fx-text-fill: #1e298f;
+}
+
+.axis-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #6a6a5a;
+}
+
+.chart-legend {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6a6a5a;
+}
+
+/* BarChart styling */
+.default-color0.chart-bar {
+    -fx-bar-fill: #1e298f;
+}
+
+.default-color1.chart-bar {
+    -fx-bar-fill: #FFC107;
+}
+
+/* LineChart styling */
+.default-color0.chart-series-line {
+    -fx-stroke: #1e298f;
+}
+
+.default-color0.chart-line-symbol {
+    -fx-background-color: #1e298f, white;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 5px;
+    -fx-padding:5px;
+}

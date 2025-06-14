@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<?import javafx.scene.control.ScrollPane?>
+<HBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.projetjavafx.root.jobFeed.ApplicationFormController"
+      spacing="0"
+      stylesheets="@css/application-form.css">
+
+    <!-- SIDE BAR -->
+    <VBox styleClass="sidebar" prefWidth="250">
+        <padding>
+            <Insets top="40" right="20" bottom="20" left="20"/>
+        </padding>
+        <Label text="CareerConnect" styleClass="sidebar-title"/>
+        <Label text="Application Portal" styleClass="sidebar-subtitle"/>
+    </VBox>
+
+    <!-- MAIN CONTENT -->
+    <ScrollPane fitToWidth="true" fitToHeight="true">
+        <VBox spacing="10" styleClass="content-box">
+            <padding>
+                <Insets top="40.0" right="40.0" bottom="40.0" left="40.0"/>
+            </padding>
+
+            <Label text="Application Form" styleClass="form-title"/>
+            <Label text="Please complete all required fields" styleClass="form-subtitle"/>
+
+            <VBox spacing="15" styleClass="form-container">
+                <Label text="Cover Letter:" styleClass="form-label"/>
+                <TextArea fx:id="coverLetterArea"
+                          promptText="Write your cover letter here..."
+                          wrapText="true"
+                          prefHeight="200"
+                          styleClass="form-textarea"/>
+
+                <Label text="Resume:" styleClass="form-label"/>
+                <HBox spacing="10" styleClass="file-upload-box">
+                    <TextField fx:id="resumePathField"
+                               editable="false"
+                               prefWidth="300"
+                               styleClass="form-field"/>
+                    <Button fx:id="browseButton"
+                            text="Browse..."
+                            styleClass="browse-button"/>
+                </HBox>
+
+                <Button fx:id="submitButton"
+                        text="Submit Application"
+                        defaultButton="true"
+                        styleClass="submit-button"/>
+            </VBox>
+        </VBox>
+    </ScrollPane>
+</HBox>

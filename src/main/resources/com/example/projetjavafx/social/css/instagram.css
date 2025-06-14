@@ -1,0 +1,642 @@
+/* Styles généraux */
+.root {
+    -fx-background-color: #FAFAFA;
+}
+
+/* Style pour les posts - Version améliorée */
+.post-background {
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 12, 0, 0, 6);
+    -fx-transition: all 0.3s ease;
+    -fx-padding: 0;
+    -fx-spacing: 0;
+}
+
+.post-background:hover {
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 18, 0, 0, 10);
+    -fx-translate-y: -3px;
+}
+
+.user-name {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.post-timestamp {
+    -fx-text-fill: #8e8e8e;
+    -fx-font-size: 12px;
+}
+
+.interaction-button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.interaction-button:hover {
+    -fx-opacity: 0.7;
+}
+
+/* Style pour la barre latérale */
+.sidebar {
+    -fx-background-color: white;
+    -fx-border-color: #DBDBDB;
+    -fx-border-width: 0 1 0 0;
+}
+
+/* Style pour le nom d'utilisateur dans la barre latérale */
+#userName {
+    -fx-text-fill: #d54d67; /* Couleur rose-rouge pour correspondre aux boutons d'authentification */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* Style pour la barre de recherche */
+.search-field {
+    -fx-background-color: #EFEFEF;
+    -fx-background-radius: 8;
+    -fx-padding: 8;
+}
+
+/* Style pour le bouton d'ajout de post */
+.add-post-button {
+    -fx-background-color: #0095F6;
+    -fx-text-fill: white;
+    -fx-background-radius: 4;
+    -fx-padding: 8 16;
+}
+
+.liked {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+}
+
+/* Global Styles */
+.root {
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #f8f9fa, #e9ecef);
+    -fx-font-family: "Montserrat", "Segoe UI", sans-serif;
+}
+
+/* Modern Icon Buttons */
+.icon-button {
+    -fx-background-color: rgba(255,255,255,0.2);
+    -fx-text-fill: white;
+    -fx-background-radius: 20px;
+    -fx-padding: 8px 12px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 1, 1);
+    -fx-transition: all 0.2s ease;
+}
+
+.icon-button:hover {
+    -fx-background-color: rgba(255,255,255,0.3);
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+/* Navigation Tabs */
+.nav-tab {
+    -fx-cursor: hand;
+    -fx-font-weight: 600;
+    -fx-transition: all 0.2s ease;
+}
+
+.nav-tab:hover {
+    -fx-background-color: rgba(213, 77, 103, 0.1) !important;
+    -fx-text-fill: #d54d67 !important;
+}
+
+/* Enhanced Action Buttons */
+.action-button {
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 6, 0, 2, 3);
+    -fx-transition: all 0.3s ease;
+}
+
+.action-button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0, 3, 5);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.secondary-button {
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s ease;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #e9ecef !important;
+    -fx-border-color: #adb5bd !important;
+}
+
+/* Top Navigation Bar */
+#topBar {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #1c2b5d, #3d5472);
+    -fx-padding: 15px 25px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 4);
+}
+
+#appTitle {
+    -fx-text-fill: white;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 1, 1);
+}
+
+/* Authentication Buttons */
+.auth-button {
+    -fx-background-color: #d54d67;
+    -fx-text-fill: white;
+    -fx-background-radius: 25px;
+    -fx-padding: 10px 25px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 1, 2);
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s ease;
+}
+
+.auth-button:hover {
+    -fx-background-color: #e85d77;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0, 2, 4);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Sidebar Navigation */
+#sidebar {
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #1c2b5d, #3d5472);
+    -fx-padding: 25px 15px;
+    -fx-spacing: 15px;
+    -fx-pref-width: 250px;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.2), 10, 0, -2, 0);
+}
+
+.nav-button {
+    -fx-background-color: rgba(137, 137, 186, 0.3);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-padding: 12px 20px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 1, 1);
+    -fx-min-width: 200px;
+    -fx-max-width: 200px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.nav-button:hover {
+    -fx-background-color: rgba(137, 137, 186, 0.5);
+    -fx-translate-x: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0, 2, 2);
+}
+
+.nav-button:armed, .nav-button:pressed {
+    -fx-background-color: #d54d67;
+}
+
+/* Posts Container Styling */
+#postsContainer {
+    -fx-padding: 20px;
+    -fx-background-color: transparent;
+}
+
+/* Comment styling */
+.comment-container {
+    -fx-background-color: #f8f8f8;
+    -fx-background-radius: 8px;
+    -fx-padding: 8px;
+    -fx-spacing: 5px;
+}
+
+/* Post creation form styling */
+#createPostForm {
+    -fx-background-color: white;
+    -fx-padding: 20px;
+    -fx-border-color: #dbdbdb;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);
+}
+
+#postContent {
+    -fx-background-color: #f8f8f8;
+    -fx-background-radius: 8px;
+    -fx-border-color: #dbdbdb;
+    -fx-border-radius: 8px;
+    -fx-padding: 10px;
+}
+
+/* User search dropdown styling */
+#userSearchDropdown {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-border-color: #dbdbdb;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);
+    -fx-z-index: 1000;
+    -fx-view-order: -1000;
+    -fx-opacity: 1.0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 15, 0, 0, 8);
+}
+
+/* Main Content Area */
+#mainContent {
+    -fx-background-color: white;
+    -fx-padding: 40px;
+}
+
+/* Hero Section */
+#heroTitle {
+    -fx-text-fill: #1c2b5d;
+    -fx-font-size: 36px;
+    -fx-font-weight: 800;
+    -fx-text-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 1, 1);
+}
+
+#heroSubtitle {
+    -fx-text-fill: #6a6a5a;
+    -fx-font-size: 18px;
+    -fx-font-style: italic;
+    -fx-padding: 10px 0 30px 0;
+}
+
+/* Feature Cards with Lighter Background */
+.feature-card {
+    /* Lighter gradient from white to a very light gray */
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #ffffff, #f5f5f7);
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 2, 4);
+    -fx-min-width: 280px;
+    -fx-alignment: center;
+    -fx-transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 15, 0, 4, 8);
+    -fx-translate-y: -5px;
+}
+
+.feature-title {
+    -fx-text-fill: #1c2b5d;  /* Dark color for contrast */
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+    -fx-padding: 5px 0;
+}
+
+.feature-description {
+    -fx-text-fill: #6a6a5a;
+    -fx-font-size: 14px;
+    -fx-text-alignment: center;
+}
+
+/* Action Buttons */
+.action-button {
+    -fx-background-color: #d54d67;
+    -fx-text-fill: white;
+    -fx-background-radius: 30px;
+    -fx-padding: 15px 30px;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 1, 3);
+    -fx-transition: all 0.3s ease;
+}
+
+.action-button:hover {
+    -fx-background-color: #1e298f;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 8, 0, 2, 5);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* --- "View Details" Button --- */
+.group-button {
+    -fx-background-color: #d54d67; /* Red */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 12px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-transition: 0.3s;
+}
+
+.group-button:hover {
+    -fx-background-color: #b03c54; /* Darker red on hover */
+}
+/* --- "Add Member" Button --- */
+.group-button-secondary {
+    -fx-background-color: #1c2b5d; /* Deep navy blue */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 12px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-transition: 0.3s;
+}
+
+.group-button-secondary:hover {
+    -fx-background-color: #3d5472; /* Darker blue on hover */
+}
+
+/* Styles pour les nouveaux éléments des posts */
+.post-avatar-container {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 1, 1);
+}
+
+.post-image-container {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 3);
+}
+
+.interaction-button-modern {
+    -fx-cursor: hand;
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+    -fx-transition: all 0.3s ease;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 2);
+}
+
+.interaction-button-modern:hover {
+    -fx-scale-x: 1.08;
+    -fx-scale-y: 1.08;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0, 0, 4);
+    -fx-translate-y: -2px;
+}
+
+.interaction-button-modern:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+    -fx-translate-y: 1px;
+}
+
+/* Styles spécifiques pour le bouton like */
+.like-button-active {
+    -fx-background-color: rgba(255,107,107,0.2) !important;
+    -fx-border-color: #ff6b6b !important;
+    -fx-border-width: 2px !important;
+    -fx-effect: dropshadow(gaussian, rgba(255,107,107,0.4), 8, 0, 0, 3) !important;
+}
+
+.like-button-pulse {
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+    -fx-transition: all 0.1s ease;
+}
+
+.comment-container-modern {
+    -fx-background-color: white;
+    -fx-background-radius: 12px;
+    -fx-border-color: #f0f0f0;
+    -fx-border-radius: 12px;
+    -fx-border-width: 1px;
+    -fx-padding: 8px 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 4, 0, 0, 2);
+    -fx-transition: all 0.2s ease;
+}
+
+.comment-container-modern:hover {
+    -fx-border-color: #d54d67;
+    -fx-effect: dropshadow(gaussian, rgba(213,77,103,0.2), 6, 0, 0, 3);
+}
+
+.comment-input-field {
+    -fx-background-color: white;
+    -fx-background-radius: 20px;
+    -fx-padding: 10px 15px;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 20px;
+    -fx-font-size: 13px;
+    -fx-transition: all 0.2s ease;
+}
+
+.comment-input-field:focused {
+    -fx-border-color: #d54d67;
+    -fx-effect: dropshadow(gaussian, rgba(213,77,103,0.3), 4, 0, 0, 2);
+}
+
+.publish-button {
+    -fx-background-color: #d54d67;
+    -fx-text-fill: white;
+    -fx-background-radius: 20px;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s ease;
+}
+
+.publish-button:hover {
+    -fx-background-color: #e85d77;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Styles pour le contenu enrichi des posts */
+.post-content-container {
+    -fx-background-color: rgba(248,249,250,0.3);
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.05), 4, 0, 0, 1);
+    -fx-transition: all 0.2s ease;
+}
+
+.post-content-container:hover {
+    -fx-background-color: rgba(248,249,250,0.5);
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.08), 6, 0, 0, 2);
+}
+
+.hashtag-label {
+    -fx-background-color: rgba(213,77,103,0.1);
+    -fx-text-fill: #d54d67;
+    -fx-font-size: 11px;
+    -fx-padding: 4px 10px;
+    -fx-background-radius: 15px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s ease;
+}
+
+.hashtag-label:hover {
+    -fx-background-color: rgba(213,77,103,0.2);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.new-badge {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #ff6b6b, #ff8e8e);
+    -fx-text-fill: white;
+    -fx-font-size: 9px;
+    -fx-padding: 2px 6px;
+    -fx-background-radius: 8px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(255,107,107,0.4), 3, 0, 0, 1);
+}
+
+.like-users-preview {
+    -fx-font-size: 12px;
+    -fx-text-fill: #666;
+    -fx-font-style: italic;
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s ease;
+}
+
+.like-users-preview:hover {
+    -fx-text-fill: #d54d67;
+    -fx-underline: true;
+}
+
+/* Animation pour les likes */
+.like-animation {
+    -fx-effect: dropshadow(gaussian, rgba(255,107,107,0.6), 12, 0, 0, 4);
+    -fx-scale-x: 1.3;
+    -fx-scale-y: 1.3;
+}
+
+/* Styles Instagram pour les boutons d'interaction */
+.instagram-like-btn {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-background-radius: 50px;
+    -fx-padding: 8px;
+    -fx-transition: all 0.2s ease;
+}
+
+.instagram-like-btn:hover {
+    -fx-background-color: rgba(0,0,0,0.05);
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.instagram-like-btn:pressed {
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+}
+
+/* Bouton like actif (aimé) */
+.instagram-like-btn-active {
+    -fx-background-color: transparent;
+}
+
+.instagram-like-btn-active .label {
+    -fx-text-fill: #ed4956 !important;
+}
+
+.instagram-comment-btn {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-background-radius: 50px;
+    -fx-padding: 8px;
+    -fx-transition: all 0.2s ease;
+}
+
+.instagram-comment-btn:hover {
+    -fx-background-color: rgba(0,0,0,0.05);
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.instagram-comment-btn:pressed {
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+}
+
+.instagram-share-btn {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-background-radius: 50px;
+    -fx-padding: 8px;
+    -fx-transition: all 0.2s ease;
+}
+
+.instagram-share-btn:hover {
+    -fx-background-color: rgba(0,0,0,0.05);
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.instagram-share-btn:pressed {
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+}
+
+.instagram-save-btn {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-background-radius: 50px;
+    -fx-padding: 8px;
+    -fx-transition: all 0.2s ease;
+}
+
+.instagram-save-btn:hover {
+    -fx-background-color: rgba(0,0,0,0.05);
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.instagram-save-btn:pressed {
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+}
+
+/* Bouton save actif (sauvegardé) */
+.instagram-save-btn-active .label {
+    -fx-text-fill: #262626 !important;
+    -fx-font-weight: bold !important;
+}
+
+/* Bouton menu Instagram */
+.instagram-menu-btn {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-background-radius: 50px;
+    -fx-padding: 8px;
+    -fx-transition: all 0.2s ease;
+}
+
+.instagram-menu-btn:hover {
+    -fx-background-color: rgba(0,0,0,0.05);
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.instagram-menu-btn:pressed {
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+}
+
+/* Boutons d'action des commentaires Instagram */
+.instagram-comment-action-btn {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 4px 0;
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #8e8e8e;
+    -fx-transition: all 0.2s ease;
+}
+
+.instagram-comment-action-btn:hover {
+    -fx-text-fill: #262626;
+    -fx-underline: false;
+}
+
+.instagram-comment-action-btn:pressed {
+    -fx-text-fill: #8e8e8e;
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+/* Bouton like de commentaire actif */
+.instagram-comment-like-active {
+    -fx-text-fill: #ed4956 !important;
+    -fx-font-weight: bold !important;
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="1050" prefWidth="1920" stylesheets="@css/create-job.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetjavafx.root.organizer.CreateJobOfferController">
+
+    <!-- Left Sidebar -->
+    <left>
+        <VBox id="sidebar" alignment="TOP_LEFT" prefHeight="1050.0" spacing="15">
+            <!-- Application Title -->
+            <Label id="sidebarTitle" text="Create New Job" />
+            <VBox id="sidebar" fx:id="sidebar" alignment="TOP_LEFT" prefHeight="1050.0" prefWidth="250.0" spacing="15">
+                <Button fx:id="homeButton" onAction="#handleHomeButton" prefHeight="38.0" prefWidth="213.0" styleClass="nav-button" text="Home" />
+                <Button fx:id="organizerButton" onAction="#onOrganizerButtonClick" styleClass="nav-button" text="Dashboard" />
+                <Button fx:id="groupButton" onAction="#onGroupButtonClick" styleClass="nav-button" text="Group" />
+                <Button fx:id="jobButton" onAction="#onJobFeedClick" styleClass="nav-button" text="Job Feed" />
+                <Button fx:id="createJobButton" onAction="#onCreateJobClick" styleClass="nav-button" text="Create Job" />
+                <Button fx:id="profileButton" onAction="#onProfileClick" styleClass="nav-button" text="Profile" />
+                <Button fx:id="socialButton" onAction="#onsocialButtonClick" styleClass="nav-button" text="Feed" />
+                <Button fx:id="MessageButton" onAction="#onMessagerieClick" styleClass="nav-button" text="Messagerie" />
+                <Button fx:id="pointsButton" onAction="#onPointClick" styleClass="nav-button" text="Points" />
+                <Button fx:id="chatbotButton" onAction="#onChatbotClick" styleClass="nav-button" text="AI Assistant" />
+            </VBox>
+        </VBox>
+    </left>
+
+    <!-- Center Content -->
+    <center>
+        <VBox id="formContainer" alignment="TOP_CENTER" spacing="20">
+            <!-- Form Title -->
+            <Label id="formTitle" text="Create New Job Offer" />
+
+            <!-- Form Fields -->
+            <GridPane id="formGrid" hgap="20" vgap="15">
+                <!-- Job Title -->
+                <Label styleClass="form-label" text="Job Title:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="jobTitleField" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <!-- Event Title -->
+                <Label styleClass="form-label" text="Event Title:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="eventTitleField" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <!-- Job Location -->
+                <Label styleClass="form-label" text="Job Location:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField fx:id="jobLocationField" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <!-- Employment Type -->
+                <Label styleClass="form-label" text="Employment Type:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <ComboBox fx:id="employmentTypeComboBox" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <!-- Application Deadline -->
+                <Label styleClass="form-label" text="Application Deadline:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <DatePicker fx:id="applicationDeadlinePicker" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                <!-- Min Salary -->
+                <Label styleClass="form-label" text="Min Salary:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <TextField fx:id="minSalaryField" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                <!-- Max Salary -->
+                <Label styleClass="form-label" text="Max Salary:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                <TextField fx:id="maxSalaryField" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                <!-- Currency -->
+                <Label styleClass="form-label" text="Currency:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                <ComboBox fx:id="currencyComboBox" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+                <!-- Job Description -->
+                <Label styleClass="form-label" text="Job Description:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+                <TextArea fx:id="jobDescriptionArea" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+                <!-- Recruiter Name -->
+                <Label styleClass="form-label" text="Recruiter Name:" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+                <TextField fx:id="recruiterNameField" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+                <!-- Recruiter Email -->
+                <Label styleClass="form-label" text="Recruiter Email:" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+                <TextField fx:id="recruiterEmailField" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+
+                <!-- Grid Constraints -->
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT" />
+                    <ColumnConstraints hgrow="ALWAYS" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints prefHeight="40" />
+                    <RowConstraints prefHeight="40" />
+                    <RowConstraints prefHeight="40" />
+                    <RowConstraints prefHeight="40" />
+                    <RowConstraints prefHeight="40" />
+                    <RowConstraints prefHeight="40" />
+                    <RowConstraints prefHeight="40" />
+                    <RowConstraints prefHeight="40" />
+                    <RowConstraints prefHeight="100" />
+                    <RowConstraints prefHeight="40" />
+                    <RowConstraints prefHeight="40" />
+                </rowConstraints>
+            </GridPane>
+
+            <!-- Submit Button -->
+            <Button fx:id="postJobButton" onAction="#handlePostJob" styleClass="submit-button" text="Post Job" />
+        </VBox>
+    </center>
+</BorderPane>

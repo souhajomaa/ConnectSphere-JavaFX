@@ -1,0 +1,183 @@
+/* ============================== */
+/*       Styles Généraux          */
+/* ============================== */
+.root {
+    -fx-background-color: #f5f5f5;
+    -fx-font-family: "Arial", sans-serif;
+}
+
+/* ============================== */
+/*       Styles pour Tous les Boutons */
+/* ============================== */
+.button {
+    -fx-background-color: transparent; /* Fond transparent par défaut */
+    -fx-text-fill: white; /* Couleur du texte */
+    -fx-font-size: 14px;
+    -fx-padding: 8px 12px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-transition: 0.3s;
+}
+
+/* ============================== */
+/*       Titre et Barre de Recherche */
+/* ============================== */
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+#searchField {
+    -fx-pref-height: 35px;
+    -fx-pref-width: 300px;
+    -fx-padding: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+#searchField:focused {
+    -fx-border-color: #0078D7;
+}
+
+/* ============================== */
+/*       Bouton "New Event"       */
+/* ============================== */
+.new-event-button {
+    -fx-background-color:  #1c2b5d;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 12px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-transition: 0.3s;
+}
+
+.new-event-button:hover {
+    -fx-background-color: #1e298f30;
+}
+
+/* ============================== */
+/*      Conteneur des Événements  */
+/* ============================== */
+#eventsContainer {
+    -fx-padding: 20px;
+}
+
+/* ============================== */
+/*      Cartes des Événements     */
+/* ============================== */
+.event-card {
+    -fx-pref-width: 300px;
+    -fx-pref-height: 200px;
+    -fx-padding: 15px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 5);
+    -fx-alignment: center;
+    -fx-transition: 0.3s;
+}
+
+.event-card:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 15, 0, 0, 8);
+}
+
+/* ============================== */
+/*       Image de l'Événement     */
+/* ============================== */
+.event-image {
+    -fx-border-radius: 10px;
+}
+
+/* ============================== */
+/*      Description de l'Événement */
+/* ============================== */
+.event-description {
+    -fx-font-size: 14px;
+    -fx-text-alignment: center;
+    -fx-text-fill: #6a6a5a;
+}
+
+/* ============================== */
+/*      Boutons des Événements    */
+/* ============================== */
+.event-buttons {
+    -fx-spacing: 10;
+    -fx-alignment: center;
+}
+
+/* --- Bouton "View Details" --- */
+.event-button {
+    -fx-background-color: #d54d67;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 12px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-transition: 0.3s;
+}
+
+.event-button:hover {
+    -fx-background-color: #b03c54;
+}
+
+/* --- Bouton "Participer" --- */
+.event-button-secondary {
+    -fx-background-color: #1c2b5d;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 12px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-transition: 0.3s;
+}
+
+.event-button-secondary:hover {
+    -fx-background-color: #3d5472;
+}
+
+
+
+
+/* Sidebar Navigation - Already Correct */
+#sidebar {
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #1c2b5d, #3d5472);
+    -fx-padding: 25px 15px;
+    -fx-spacing: 20px;
+    -fx-pref-width: 250px;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.2), 10, 0, -2, 0);
+}
+
+.nav-button {
+    -fx-background-color: rgba(137, 137, 186, 0.3);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-padding: 15px 20px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 1, 1);
+    -fx-min-width: 200px;
+    -fx-max-width: 200px;
+    -fx-alignment: CENTER_LEFT;
+     -fx-margin: 5px 0; /* Added margin for better spacing control */
+}
+
+.nav-button:hover {
+    -fx-background-color: rgba(137, 137, 186, 0.5);
+    -fx-translate-x: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0, 2, 2);
+}
+
+.nav-button:armed, .nav-button:pressed {
+    -fx-background-color: #d54d67;
+}
+

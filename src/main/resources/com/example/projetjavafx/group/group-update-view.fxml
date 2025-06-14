@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="1050" prefWidth="1920" spacing="10" stylesheets="@css/grou-update.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetjavafx.root.group.GroupUpdateController">
+    <Label text="Modifier le groupe" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+    <TextField fx:id="nameField" promptText="Nom du groupe"/>
+    <TextArea fx:id="descriptionArea" promptText="Description du groupe" wrapText="true"/>
+    <HBox spacing="10">
+        <Button text="Enregistrer" onAction="#onSaveClick"/>
+        <Button text="Annuler" onAction="#onCancelClick"/>
+    </HBox>
+</VBox>

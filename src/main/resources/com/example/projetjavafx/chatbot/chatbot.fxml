@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane prefHeight="1050" prefWidth="1920" stylesheets="@chatbot.css"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.projetjavafx.root.chatbot.ChatbotController">
+
+    <!-- Sidebar -->
+    <VBox fx:id="sidebar" alignment="TOP_LEFT" layoutX="0.0" layoutY="0.0" prefHeight="1056.0" prefWidth="291.0" spacing="15" styleClass="sidebar">
+        <Button fx:id="homeButton" onAction="#handleHomeButton" prefHeight="38.0" prefWidth="241.0" styleClass="nav-button" text="Home" />
+        <Button fx:id="eventsButton" onAction="#onEventsClick" styleClass="nav-button" text="Events" />
+        <Button fx:id="groupButton" onAction="#onGroupButtonClick" styleClass="nav-button" text="Group" />
+        <Button fx:id="jobButton" onAction="#onJobFeedClick" styleClass="nav-button" text="Job Feed" />
+        <Button fx:id="createJobButton" onAction="#onCreateJobClick" styleClass="nav-button" text="Create Job" />
+        <Button fx:id="profileButton" onAction="#onProfileClick" styleClass="nav-button" text="Profile" />
+        <Button fx:id="socialButton" onAction="#onSocialButtonClick" styleClass="nav-button" text="Social" />
+    </VBox>
+
+    <!-- Main Container for Chatbot -->
+    <VBox fx:id="mainContainer" alignment="CENTER" layoutX="260.0" layoutY="0.0" prefHeight="1052.0" prefWidth="1666.0" spacing="10" styleClass="main-container">
+        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../photos/logo.png" />
+            </image>
+        </ImageView>
+
+        <Label fx:id="titleLabel" styleClass="title" text="ConnectSphere ChatBot" />
+        <Label fx:id="subtitleLabel" styleClass="subtitle" text="Get help to start organizing your own event">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <!-- Response Area: Using a WebView for rendering HTML -->
+        <WebView fx:id="responseWebView" prefHeight="279.0" prefWidth="517.0" />
+
+        <!-- Input Field -->
+        <TextField fx:id="inputField" prefHeight="42.0" prefWidth="412.0" promptText="Que voulez vous savoir sur notre application?" styleClass="input-field" />
+
+        <!-- HBox to group the Start and Stop buttons on the same line -->
+        <HBox alignment="CENTER" spacing="10">
+            <!-- Start Button -->
+            <Button fx:id="sendButton" prefHeight="28.0" prefWidth="160.0" styleClass="send-button" text="Start">
+                <padding>
+                    <Insets bottom="5" left="10" right="10" top="5" />
+                </padding>
+            </Button>
+            <!-- Stop Button -->
+            <Button fx:id="sendButton1" onAction="#stopChatbot" prefHeight="28.0" prefWidth="160.0" styleClass="send-button" text="Stop">
+                <padding>
+                    <Insets bottom="5" left="10" right="10" top="5" />
+                </padding>
+            </Button>
+        </HBox>
+    </VBox>
+</AnchorPane>

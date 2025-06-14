@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="990.0" prefWidth="1910.0" styleClass="root" stylesheets="@../root/css/root.css,@css/convert.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetjavafx.root.points.ConversionController">
+   <children>
+      <!-- Left Sidebar (copiée de Home.fxml) -->
+      <VBox id="sidebar" alignment="TOP_LEFT" prefHeight="998.0" prefWidth="229.0" spacing="15" styleClass="sidebar">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+               <image>
+                  <Image url="@resources/images/hip-hop_9056091.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="-2.0" left="49.0" right="22.0" top="35.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label prefHeight="44.0" prefWidth="114.0" styleClass="sidebar-label" text="Utilisateur" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Apple Chancery" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </Label>
+            <!-- Boutons de la sidebar -->
+            <Button fx:id="organizerButton" onAction="#onOrganizerButtonClick" styleClass="nav-button" text="Dashboard" />
+            <Button fx:id="eventsButton" onAction="#onEventsClick" styleClass="nav-button" text="Events" />
+            <Button fx:id="groupButton" onAction="#onGroupButtonClick" styleClass="nav-button" text="Group" />
+            <Button fx:id="jobButton" onAction="#onJobFeedClick" styleClass="nav-button" text="Job Feed" />
+            <Button fx:id="createJobButton" onAction="#onCreateJobClick" styleClass="nav-button" text="Create Job" />
+            <Button fx:id="profileButton" onAction="#onProfileClick" styleClass="nav-button" text="Profile" />
+            <Button fx:id="socialButton" mnemonicParsing="false" onAction="#onsocialButtonClick" styleClass="nav-button" text="Social" />
+            <Button fx:id="chatbotButton" onAction="#onChatbotClick" styleClass="nav-button" text="AI assistant" />
+            <Button fx:id="pointsButton" mnemonicParsing="false" onAction="#onPointClick" styleClass="nav-button" text="Points" />
+         </children>
+      </VBox>
+
+      <!-- Top Bar (copiée de Home.fxml) -->
+      <HBox id="topBar" alignment="CENTER_LEFT" layoutX="250.0" layoutY="0.0" prefHeight="72.0" prefWidth="1666.0" spacing="15" styleClass="top-bar">
+         <children>
+            <!-- Titre de l'application -->
+            <Label id="appTitle" prefHeight="34.0" prefWidth="349.0" styleClass="app-title" text="Connect Sphere" />
+            <!-- Espace flexible -->
+            <Pane HBox.hgrow="ALWAYS" />
+            <!-- Boutons d'authentification -->
+            <HBox fx:id="authButtons" alignment="CENTER_RIGHT" spacing="15" visible="false">
+               <Button fx:id="loginButton" onAction="#onLoginClick" styleClass="auth-button" text="Login" />
+               <Button fx:id="registerButton" onAction="#onRegisterClick" styleClass="auth-button" text="Register" />
+            </HBox>
+            <Button fx:id="logoutButtonn" onAction="#onLogout" styleClass="auth-button" text="Logout" visible="true" />
+            <!-- MenuButton pour les points -->
+            <MenuButton fx:id="pointMenu" alignment="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" popupSide="TOP" styleClass="point-menu" text="Points : 2000">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onConvertClick" text="convert" />
+                  <MenuItem mnemonicParsing="false" onAction="#openFortuneWheelInterface" text="fortune wheel" />
+               </items>
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/images/star.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </MenuButton>
+         </children>
+      </HBox>
+
+      <!-- Contenu principal -->
+      <VBox layoutX="250.0" layoutY="82.0" prefHeight="895.0" prefWidth="1650.0" spacing="20" styleClass="main-content">
+         <children>
+            <!-- Titre de la section -->
+            <Label styleClass="section-title" text="Earnings History and Convert Points">
+               <font>
+                  <Font name="Apple Chancery" size="24.0" />
+               </font>
+            </Label>
+      
+            <!-- Section des points et argent -->
+            <HBox alignment="CENTER" prefHeight="86.0" prefWidth="990.0" spacing="30" styleClass="points-section">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="99.0" prefWidth="124.0" styleClass="points-card">
+                     <children>
+                        <Label fx:id="point" styleClass="points-value" text="2200" />
+                        <Label styleClass="points-label" text="Points" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="99.0" prefWidth="235.0" styleClass="money-card">
+                     <children>
+                        <Label fx:id="montantLabel" prefHeight="32.0" prefWidth="150.0" styleClass="money-value" text="2200" />
+                        <Label styleClass="money-label" text="Money" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="120.0" prefWidth="300.0" styleClass="convert-section">
+                     <children>
+                        <Label styleClass="convert-label" text="Number of points convert" />
+                        <Spinner fx:id="num_point" prefWidth="150.0" styleClass="convert-spinner" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="120.0" prefWidth="200.0" styleClass="convert-section">
+                     <children>
+                        <MenuButton fx:id="deviseSelect" mnemonicParsing="false" popupSide="TOP" styleClass="devise-select" text="TND">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#deviceToEUR" text="EUR" />
+                              <MenuItem mnemonicParsing="false" onAction="#deviceToTND" text="TND" />
+                              <MenuItem mnemonicParsing="false" onAction="#deviceToUSD" text="USD" />
+                           </items>
+                        </MenuButton>
+                        <Button mnemonicParsing="false" onMouseClicked="#convertPointToMoney" styleClass="convert-button" text="Convert" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+
+            <!-- Onglets d'historique -->
+            <TabPane prefHeight="485.0" prefWidth="990.0" styleClass="history-tabs" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab styleClass="history-tab" text="Historique de point">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="410.0" prefWidth="988.0">
+                           <children>
+                              <TableView fx:id="historique" layoutX="2.0" layoutY="56.0" prefHeight="494.0" prefWidth="1577.0" styleClass="history-table">
+                                 <columns>
+                                    <TableColumn fx:id="Temp" prefWidth="200.0" text="Date action" />
+                                    <TableColumn fx:id="Point" prefWidth="150.0" text="Points" />
+                                    <TableColumn fx:id="Type" prefWidth="150.0" text="Type" />
+                                    <TableColumn fx:id="Raison" prefWidth="460.0" text="Raison" />
+                                 </columns>
+                              </TableView>
+                              <TextField fx:id="searchHistorique" layoutX="296.0" layoutY="14.0" onKeyTyped="#onSearchHistory" prefHeight="30.0" prefWidth="300.0" promptText="Rechercher..." styleClass="search-field" />
+                              <MenuButton fx:id="searchBy" layoutX="626.0" layoutY="11.0" mnemonicParsing="false" prefHeight="34.0" styleClass="search-menu" text="All">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#onAllSelected" text="tous" />
+                                    <MenuItem mnemonicParsing="false" onAction="#onTypeSelected" text="type" />
+                                    <MenuItem mnemonicParsing="false" onAction="#onRaisonSelected" text="raison" />
+                                 </items>
+                              </MenuButton>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab styleClass="history-tab" text="Historique de conversion">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="373.0" prefWidth="988.0">
+                           <children>
+                              <TableView fx:id="convert" layoutX="14.0" layoutY="52.0" prefHeight="312.0" prefWidth="960.0" styleClass="history-table">
+                                 <columns>
+                                    <TableColumn fx:id="date" prefWidth="200.0" text="Date" />
+                                    <TableColumn fx:id="devise" prefWidth="150.0" text="Devise" />
+                                    <TableColumn fx:id="Converti" prefWidth="200.0" text="Points Convertis" />
+                                    <TableColumn fx:id="montant" prefWidth="410.0" text="Montant Reçu" />
+                                 </columns>
+                              </TableView>
+                              <TextField fx:id="searchDevise" layoutX="299.0" layoutY="14.0" onKeyTyped="#onTransactionSearch" prefHeight="30.0" prefWidth="300.0" promptText="Rechercher par devise..." styleClass="search-field" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

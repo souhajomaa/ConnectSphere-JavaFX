@@ -1,0 +1,49 @@
+/* Professional Event Platform Styling */
+.root {
+    -fx-accent: #1e298f; /* jacksons-purple for focus */
+    -fx-font-family: 'Segue UI', sans-serif;
+}
+
+/* Sophisticated Sidebar */
+#sidebar {
+    -fx-background-color: #1c2b5d; /* biscay - deep navy */
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+    -fx-border-color: #8989ba; /* wild-blue yonder accent */
+    -fx-border-width: 0 1px 0 0;
+}
+
+/* Clean Navigation Buttons */
+#sidebar > Button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 4;
+    -fx-alignment: CENTER_LEFT;
+    -fx-border-width: 0 0 0 3px;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s;
+}
+
+#sidebar > Button:hover {
+    -fx-background-color: #1e298f30; /* jacksons-purple with transparency */
+    -fx-border-color: #8989ba; /* wild-blue yonder accent */
+}
+
+/* Professional Content Area */
+#contentContainer {
+    -fx-background-color: #ffffff;
+    -fx-padding: 30px;
+    -fx-spacing: 20px;
+}
+
+/* Minimalist Section Headers */
+#jobLabel {
+    -fx-text-fill: #1c2b5d; /* biscay */
+    -fx-font-size: 20px;
+    -fx-font-weight: 600;
+    -fx-graphic-text-gap: 10px;
+}
+

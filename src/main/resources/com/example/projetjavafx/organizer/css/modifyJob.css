@@ -1,0 +1,64 @@
+/* Base styling for the Modify Job Popup */
+.root {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-background-color: #f0f2f5; /* Light gray for contrast */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    -fx-background-color: #1c2b5d; /* Deep navy */
+    -fx-padding: 20px;
+    -fx-alignment: CENTER;
+}
+
+.sidebar-title {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+/* Content Container Styling */
+.content-container {
+    -fx-background-color: #ffffff;
+    -fx-padding: 30px;
+    -fx-spacing: 15px;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0, 0, 4);
+}
+
+/* Form Title */
+.form-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1c2b5d;
+}
+
+/* Form Labels */
+.form-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #1c2b5d;
+}
+
+/* Form Fields */
+.form-field {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #cabfbe; /* Silver-rust accent */
+    -fx-border-radius: 4;
+    -fx-padding: 8px;
+}
+
+/* Save Button */
+.save-button {
+    -fx-background-color: #1e298f; /* Jackson's purple */
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-background-radius: 4;
+    -fx-padding: 8px 16px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(30, 41, 143, 0.1), 2, 0, 1, 1);
+}
+
+.save-button:hover {
+    -fx-background-color: #2a38b3;
+    -fx-effect: dropshadow(gaussian, rgba(30, 41, 143, 0.2), 4, 0, 2, 2);
+}

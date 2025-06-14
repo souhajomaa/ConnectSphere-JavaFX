@@ -1,0 +1,108 @@
+/* Main container styling */
+.root {
+    -fx-background-color: #ffffff;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    -fx-background-color: #1c2b5d; /* biscay */
+    -fx-border-color: #8989ba; /* wild-blue yonder */
+    -fx-border-width: 0 1px 0 0;
+}
+
+.sidebar-title {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: 700;
+    -fx-padding: 0 0 10px 0;
+}
+
+.sidebar-subtitle {
+    -fx-text-fill: #8989ba;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+}
+
+/* Content Area Styling */
+.content-box {
+    -fx-background-color: #f8f9fc;
+}
+
+.form-title {
+    -fx-text-fill: #1c2b5d;
+    -fx-font-size: 28px;
+    -fx-font-weight: 700;
+    -fx-padding: 0 0 5px 0;
+}
+
+.form-subtitle {
+    -fx-text-fill: #6a6a5a;
+    -fx-font-size: 14px;
+    -fx-padding: 0 0 20px 0;
+}
+
+.form-container {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #e3e6ef;
+    -fx-border-width: 1px;
+    -fx-padding: 30px;
+    -fx-effect: dropshadow(gaussian, rgba(28,43,93,0.05), 8, 0.05, 0, 2);
+}
+
+.form-label {
+    -fx-text-fill: #1c2b5d;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+}
+
+.form-textarea, .form-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #d8dae3;
+    -fx-border-radius: 4px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+}
+
+.form-textarea:focused, .form-field:focused {
+    -fx-border-color: #8989ba;
+    -fx-effect: dropshadow(gaussian, rgba(136,160,175,0.15), 4, 0, 0, 2);
+}
+
+.file-upload-box {
+    -fx-background-color: #f8f9fc;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-padding: 10px;
+}
+
+.browse-button {
+    -fx-background-color: #1e298f;
+    -fx-text-fill: white;
+    -fx-background-radius: 4px;
+    -fx-padding: 8px 20px;
+    -fx-font-weight: 500;
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s;
+}
+
+.browse-button:hover {
+    -fx-background-color: #2a38b3;
+}
+
+.submit-button {
+    -fx-background-color: #1c2b5d;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+    -fx-padding: 12px 30px;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s;
+}
+
+.submit-button:hover {
+    -fx-background-color: #2a38b3;
+    -fx-effect: dropshadow(gaussian, rgba(28,43,93,0.2), 8, 0, 0, 2);
+}

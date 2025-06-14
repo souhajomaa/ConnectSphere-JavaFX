@@ -1,0 +1,195 @@
+/* Global Styles */
+.root {
+    -fx-background-color: white;
+    -fx-font-family: "Montserrat", "Segoe UI", sans-serif;
+    -fx-accent: #1e298f; /* jackson's-purple for focus */
+}
+
+/* Top Navigation Bar / App Title */
+#appTitle {
+    -fx-text-fill: white;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 1, 1);
+    -fx-padding: 0 0 15px 0;
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: #8989ba; /* wild-blue yonder accent */
+}
+
+/* Sidebar Navigation - Already Correct */
+#sidebar {
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #1c2b5d, #3d5472);
+    -fx-padding: 25px 15px;
+    -fx-spacing: 20px;
+    -fx-pref-width: 250px;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.2), 10, 0, -2, 0);
+}
+
+.nav-button {
+    -fx-background-color: rgba(137, 137, 186, 0.3);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-padding: 15px 20px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 1, 1);
+    -fx-min-width: 200px;
+    -fx-max-width: 200px;
+    -fx-alignment: CENTER_LEFT;
+     -fx-margin: 5px 0; /* Added margin for better spacing control */
+}
+
+.nav-button:hover {
+    -fx-background-color: rgba(137, 137, 186, 0.5);
+    -fx-translate-x: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0, 2, 2);
+}
+
+.nav-button:armed, .nav-button:pressed {
+    -fx-background-color: #d54d67;
+}
+
+/* Professional Content Area */
+#contentContainer {
+    -fx-background-color: white;
+    -fx-padding: 40px;
+    -fx-spacing: 20px;
+}
+
+/* Enhanced Section Containers */
+#eventSection, #jobSection, #participantSection {
+    -fx-spacing: 10px;
+}
+
+/* Minimalist Section Headers */
+#eventHeader, #jobHeader, #participantHeader {
+    -fx-background-color: white;
+    -fx-padding: 15px;
+    -fx-spacing: 15px;
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: #cabfbe; /* silver-rust */
+}
+
+#eventLabel, #jobLabel, #participantLabel {
+    -fx-text-fill: #1c2b5d;
+    -fx-font-size: 20px;
+    -fx-font-weight: 600;
+    -fx-graphic-text-gap: 10px;
+}
+
+/* Professional Action Buttons */
+#newEventButton,
+#newJobPostButton,
+#refreshEventButton,
+#refreshJobButton,
+#refreshParticipantsButton,
+#deleteEventButton,
+#modifyEventButton,
+#deleteJobButton,
+#modifyJobButton,
+#deleteParticipantButton,
+#modifyParticipantButton {
+    -fx-background-color: #d54d67;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 25px;
+    -fx-background-radius: 30px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 1, 3);
+}
+
+/* Hover states for action buttons */
+#newEventButton:hover,
+#newJobPostButton:hover,
+#refreshEventButton:hover,
+#refreshJobButton:hover,
+#refreshParticipantsButton:hover,
+#deleteEventButton:hover,
+#modifyEventButton:hover,
+#deleteJobButton:hover,
+#modifyJobButton:hover,
+#deleteParticipantButton:hover,
+#modifyParticipantButton:hover {
+    -fx-background-color: #1e298f;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 8, 0, 2, 5);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Elegant Table Design */
+TableView {
+    -fx-background-color: white;
+    -fx-border-color: #cabfbe;
+    -fx-border-radius: 4;
+    -fx-background-insets: 0;
+}
+
+.table-row-cell:filled {
+    -fx-border-color: transparent transparent #f5f5f5 transparent;
+}
+
+.table-row-cell:filled:selected {
+    -fx-background-color: #88a0af20;
+}
+
+.table-row-cell:filled:hover {
+    -fx-background-color: #f8f9fa;
+}
+
+TableColumn .column-header-background {
+    -fx-background-color: #1c2b5d;
+}
+
+TableColumn .column-header {
+    -fx-text-fill: white;
+    -fx-font-weight: 500;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12px 15px;
+}
+
+TableColumn .label {
+    -fx-text-fill: white;
+}
+
+/* Professional Status Indicators */
+.status-indicator {
+    -fx-padding: 4px 8px;
+    -fx-background-radius: 12;
+    -fx-font-size: 12px;
+    -fx-font-weight: 500;
+}
+
+.status-active {
+    -fx-background-color: rgba(136,160,175,0.3);
+    -fx-text-fill: #1c2b5d;
+}
+
+.status-completed {
+    -fx-background-color: rgba(202,191,190,0.3);
+    -fx-text-fill: #675552;
+}
+
+/* Subtle Interactive Elements */
+.hyperlink {
+    -fx-text-fill: #1e298f;
+    -fx-border-color: transparent;
+    -fx-underline: false;
+    -fx-cursor: hand;
+}
+
+.hyperlink:hover {
+    -fx-underline: true;
+}
+
+/* Professional Form Controls */
+.text-field, .combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #cabfbe;
+    -fx-border-radius: 4;
+    -fx-padding: 8px;
+}
+
+.text-field:focused, .combo-box:focused {
+    -fx-border-color: #1e298f;
+}

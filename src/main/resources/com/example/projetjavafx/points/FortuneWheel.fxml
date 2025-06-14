@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="922.0" prefWidth="1617.0" style="-fx-background-color: #fff;" stylesheets="@../root/css/root.css,@css/convert.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetjavafx.root.points.FortuneWheelController">
+   <children>
+      <!-- Left Sidebar (inchangée) -->
+      <VBox id="sidebar" alignment="TOP_LEFT" prefHeight="995.0" prefWidth="250.0" spacing="15" style="-fx-background-color: #1C2B5D;">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+               <image>
+                  <Image url="@resources/images/hip-hop_9056091.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="-2.0" left="49.0" right="22.0" top="35.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label fx:id="profile" onMouseClicked="#retrunToProfile" text="Utilisateur" textFill="#f2ebeb">
+               <font>
+                  <Font name="Apple Chancery" size="19.0" />
+               </font>
+               <padding>
+                  <Insets left="59.0" />
+               </padding>
+            </Label>
+            <Button fx:id="organizerButton" onAction="#onOrganizerButtonClick" styleClass="nav-button" text="Dashboard" />
+            <Button fx:id="eventsButton" onAction="#onEventsClick" styleClass="nav-button" text="Events" />
+            <Button fx:id="groupButton" onAction="#onGroupButtonClick" styleClass="nav-button" text="Group" />
+            <Button fx:id="jobButton" onAction="#onJobFeedClick" styleClass="nav-button" text="Job Feed" />
+            <Button fx:id="createJobButton" onAction="#onCreateJobClick" styleClass="nav-button" text="Create Job" />
+            <Button fx:id="profileButton" onAction="#onProfileClick" styleClass="nav-button" text="Profile" />
+            <Button fx:id="socialButton" mnemonicParsing="false" onAction="#onsocialButtonClick" styleClass="nav-button" text="Social" />
+            <Button fx:id="chatbotButton" onAction="#onChatbotClick" styleClass="nav-button" text="AI assistant" />
+            <Button fx:id="pointsButton" mnemonicParsing="false" onAction="#onPointClick" styleClass="nav-button" text="Points" />
+         </children>
+      </VBox>
+
+      <!-- Top Bar (inchangée) -->
+      <HBox id="topBar" alignment="CENTER_LEFT" layoutX="250.0" layoutY="0.0" prefHeight="72.0" prefWidth="1613.0" spacing="15">
+         <children>
+            <Label id="appTitle" prefHeight="34.0" prefWidth="349.0" text="Connect Sphere" textAlignment="RIGHT">
+               <font>
+                  <Font name="Andale Mono" size="9.0" />
+               </font>
+            </Label>
+            <Pane HBox.hgrow="ALWAYS" />
+            <HBox fx:id="authButtons" alignment="CENTER_RIGHT" spacing="15" visible="false">
+               <Button fx:id="loginButton" onAction="#onLoginClick" prefHeight="34.0" prefWidth="141.0" styleClass="auth-button" text="Login" />
+               <Button fx:id="registerButton" onAction="#onRegisterClick" prefHeight="34.0" prefWidth="140.0" styleClass="auth-button" text="Register" />
+            </HBox>
+            <Button fx:id="logoutButtonn" onAction="#onLogout" prefHeight="38.0" prefWidth="244.0" styleClass="auth-button" text="Logout" visible="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <MenuButton fx:id="pointMenu" alignment="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" popupSide="TOP" prefHeight="42.0" prefWidth="313.0" style="-fx-background-color: #FEFEFE;" text="Points : 2000" textFill="#1c2b5d">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onConvertClick" text="convert" />
+                  <MenuItem mnemonicParsing="false" onAction="#openFortuneWheelInterface" text="fortune wheel" />
+               </items>
+               <font>
+                  <Font name="Apple Chancery" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/images/star.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </MenuButton>
+         </children>
+      </HBox>
+
+      <!-- Contenu principal (inchangé) -->
+      <AnchorPane layoutX="250.0" layoutY="72.0" prefHeight="915.0" prefWidth="1613.0" style="-fx-background-color: #FAF9F6;">
+         <children>
+            <HBox layoutX="-6.0" layoutY="8.0" prefHeight="56.0" prefWidth="744.0">
+               <children>
+                  <Label />
+                  <VBox alignment="CENTER" prefHeight="121.0" prefWidth="141.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="121.0" prefWidth="120.0">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="161.0" prefWidth="109.0">
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <ImageView fitHeight="100.0" fitWidth="88.0" layoutX="60.0" layoutY="612.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/images/euro_2140555.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="88.0" layoutX="102.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/images/dollar_9382196.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="133.0" fitWidth="127.0" layoutX="102.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/images/balloon_13567069.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="135.0" fitWidth="133.0" layoutX="1112.0" layoutY="557.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/images/gift-box_4114367.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="1104.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/images/nejma.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="73.0" fitWidth="60.0" layoutX="26.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+            <AnchorPane layoutX="214.0" layoutY="59.0" prefHeight="469.0" prefWidth="478.0" style="-fx-background-color: transparent;">
+               <children>
+                  <Canvas fx:id="wheelCanvas" height="465.0" layoutX="27.0" width="592.0" />
+                  <Canvas fx:id="wheelCanvas1" height="495.0" layoutX="130.0" layoutY="85.0" width="672.0" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="spinButton" layoutX="729.0" layoutY="681.0" prefHeight="34.0" prefWidth="100.0" style="-fx-background-color: #1C2B5D; -fx-text-fill: white; -fx-font-size: 16; -fx-font-weight: bold;" text="Play">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="88.0" fitWidth="94.0" layoutX="1123.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/images/fete.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

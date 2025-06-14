@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetjavafx.root.social.GroupController">
+    <children>
+        <Label text="Group Feed" style="-fx-font-size: 24px; -fx-padding: 10;" />
+
+        <HBox spacing="10" padding="10">
+            <TextArea fx:id="newPostContent" promptText="Write something..." prefHeight="100" />
+            <Button text="Post" fx:id="postButton" />
+        </HBox>
+
+        <ListView fx:id="groupFeedListView" prefHeight="400">
+            <!-- ListView will display posts -->
+        </ListView>
+    </children>
+</VBox>

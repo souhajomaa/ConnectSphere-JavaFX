@@ -1,0 +1,43 @@
+/* ============================== */
+/*       Styles de la Barre de Navigation */
+/* ============================== */
+/* Sidebar Navigation - Already Correct */
+#sidebar {
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #1c2b5d, #3d5472);
+    -fx-padding: 25px 15px;
+    -fx-spacing: 20px;
+    -fx-pref-width: 250px;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.2), 10, 0, -2, 0);
+}
+
+.nav-button {
+    -fx-background-color: rgba(137, 137, 186, 0.3);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-padding: 15px 20px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 1, 1);
+    -fx-min-width: 200px;
+    -fx-max-width: 200px;
+    -fx-alignment: CENTER_LEFT;
+     -fx-margin: 5px 0; /* Added margin for better spacing control */
+}
+
+.nav-button:hover {
+    -fx-background-color: rgba(137, 137, 186, 0.5);
+    -fx-translate-x: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0, 2, 2);
+}
+
+.nav-button:armed, .nav-button:pressed {
+    -fx-background-color: #d54d67;
+}
+/* Style pour l'ImageView de profil */
+#profileImageView {
+    -fx-border-color: #6a6a5a; /* Couleur de la bordure */
+    -fx-border-width: 2px; /* Épaisseur de la bordure */
+    -fx-border-radius: 50%; /* Bordure circulaire */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 0); /* Ombre */
+}

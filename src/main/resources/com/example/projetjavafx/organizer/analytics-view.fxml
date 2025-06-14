@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <?import javafx.scene.control.Button?>
+        <?import javafx.scene.control.ComboBox?>
+        <?import javafx.scene.control.Label?>
+        <?import javafx.scene.chart.BarChart?>
+        <?import javafx.scene.chart.LineChart?>
+        <?import javafx.scene.chart.CategoryAxis?>
+        <?import javafx.scene.chart.NumberAxis?>
+        <?import javafx.scene.layout.BorderPane?>
+        <?import javafx.scene.layout.HBox?>
+        <?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="1050" prefWidth="1920"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.projetjavafx.root.organizer.AnalyticsController"
+            stylesheets="@css/analytics.css">
+
+    <!-- Sidebar with navigation buttons -->
+    <left>
+        <VBox id="sidebar" prefHeight="979.0" prefWidth="250.0" spacing="10">
+            <Button fx:id="homeButton" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="228.0" text="Home" styleClass="nav-button" />
+            <Button fx:id="dashboardButton" onAction="#onDashboardClick" prefHeight="40.0" prefWidth="332.0" styleClass="nav-button" text="Dashboard" />
+            <Button fx:id="jobFeedButton" onAction="#onJobFeedButtonClick" prefHeight="40.0" prefWidth="246.0" styleClass="nav-button" text="Job Feed" />
+            <Button fx:id="jobApplicationsButton" onAction="#onJobApplicationsButtonClick" prefHeight="40.0" prefWidth="225.0" styleClass="nav-button" text="Job Applications" />
+            <Button fx:id="createJobButton" onAction="#onCreateJobButtonClick" prefHeight="40.0" prefWidth="299.0" styleClass="nav-button" text="Create Job" />
+            <Button fx:id="eventsButton" mnemonicParsing="false" onAction="#onEventsClick" prefHeight="40.0" prefWidth="227.0" styleClass="nav-button" text="Events" />
+            <Button fx:id="analyticsButton" mnemonicParsing="false" onAction="#onAnalyticsClick" prefHeight="40.0" prefWidth="224.0" styleClass="nav-button" text="Analytics" />
+        </VBox>
+    </left>
+
+    <!-- Top bar for the analytics view -->
+    <top>
+        <HBox id="topBar" alignment="CENTER" spacing="15">
+            <Label text="Event Analytics" id="appTitle" />
+            <ComboBox fx:id="eventComboBox" promptText="Select an event" />
+        </HBox>
+    </top>
+
+    <!-- Main content area for statistics and charts -->
+    <center>
+        <VBox id="mainContent" spacing="20" alignment="CENTER">
+            <!-- Stats Display -->
+            <HBox id="stats-container" spacing="25" alignment="CENTER">
+                <VBox spacing="10" alignment="CENTER">
+                    <Label text="Total Participants:" styleClass="feature-title"/>
+                    <Label fx:id="totalParticipantsLabel" text="0" styleClass="feature-description"/>
+                </VBox>
+                <VBox spacing="10" alignment="CENTER">
+                    <Label text="Male Participants:" styleClass="feature-title"/>
+                    <Label fx:id="maleParticipantsLabel" text="0" styleClass="feature-description"/>
+                </VBox>
+                <VBox spacing="10" alignment="CENTER">
+                    <Label text="Female Participants:" styleClass="feature-title"/>
+                    <Label fx:id="femaleParticipantsLabel" text="0" styleClass="feature-description"/>
+                </VBox>
+            </HBox>
+
+            <!-- Charts Section -->
+            <HBox id="charts-container" spacing="30" alignment="CENTER">
+                <BarChart fx:id="genderBarChart" title="Gender Distribution">
+                    <xAxis>
+                        <CategoryAxis label="Gender"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis label="Participants"/>
+                    </yAxis>
+                </BarChart>
+
+                <LineChart fx:id="participationLineChart" title="Participation Trend">
+                    <xAxis>
+                        <CategoryAxis label="Events"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis label="Total Participants"/>
+                    </yAxis>
+                </LineChart>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

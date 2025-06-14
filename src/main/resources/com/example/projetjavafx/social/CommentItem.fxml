@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.Circle?>
+
+<HBox spacing="12" alignment="CENTER_LEFT" style="-fx-padding: 8 15; -fx-background-color: white; -fx-background-radius: 12; -fx-border-color: #f0f0f0; -fx-border-radius: 12; -fx-border-width: 1;" fx:controller="com.example.projetjavafx.root.social.CommentItemController">
+    <StackPane>
+        <Circle fill="#f8f9fa" radius="18" />
+        <ImageView fx:id="userAvatar" fitHeight="32" fitWidth="32" style="-fx-background-radius: 16;">
+            <clip>
+                <Circle radius="16" />
+            </clip>
+        </ImageView>
+    </StackPane>
+    <VBox spacing="6" HBox.hgrow="ALWAYS">
+        <HBox spacing="8" alignment="CENTER_LEFT">
+            <Label fx:id="userName" style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-text-fill: #1c2b5d;" />
+            <Label fx:id="timestamp" style="-fx-text-fill: #8e8e8e; -fx-font-size: 11px;" />
+        </HBox>
+        <Label fx:id="commentContent" wrapText="true" style="-fx-font-size: 13px; -fx-text-fill: #333; -fx-line-spacing: 1;" />
+        <HBox spacing="12" alignment="CENTER_LEFT">
+            <Button fx:id="editCommentButton" text="Edit" onAction="#handleEditComment" visible="false" managed="false" styleClass="instagram-comment-action-btn" style="-fx-background-color: transparent; -fx-text-fill: #8e8e8e; -fx-font-size: 12px; -fx-cursor: hand; -fx-padding: 4 0; -fx-font-weight: 600;" />
+            <Button fx:id="deleteCommentButton" text="Delete" onAction="#handleDeleteComment" visible="false" managed="false" styleClass="instagram-comment-action-btn" style="-fx-background-color: transparent; -fx-text-fill: #8e8e8e; -fx-font-size: 12px; -fx-cursor: hand; -fx-padding: 4 0; -fx-font-weight: 600;" />
+            <Button fx:id="likeCommentButton" text="Like" onAction="#handleLikeComment" styleClass="instagram-comment-action-btn" style="-fx-background-color: transparent; -fx-text-fill: #8e8e8e; -fx-font-size: 12px; -fx-cursor: hand; -fx-padding: 4 0; -fx-font-weight: 600;" />
+            <Button fx:id="replyButton" text="Reply" onAction="#handleReply" styleClass="instagram-comment-action-btn" style="-fx-background-color: transparent; -fx-text-fill: #8e8e8e; -fx-font-size: 12px; -fx-cursor: hand; -fx-padding: 4 0; -fx-font-weight: 600;" />
+        </HBox>
+    </VBox>
+</HBox>

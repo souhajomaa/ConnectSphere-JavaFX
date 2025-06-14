@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="800" prefWidth="800" stylesheets="@css/root.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetjavafx.root.RootController">
+
+    <top>
+        <HBox id="topBar" alignment="CENTER_LEFT" spacing="15">
+            <Label id="appTitle" text="Connect Sphere" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <HBox fx:id="authButtons" alignment="TOP_RIGHT" spacing="15" visible="false">
+                <Button fx:id="loginButton" onAction="#onLoginClick" prefHeight="34.0" prefWidth="141.0" styleClass="auth-button" text="Login" />
+                <Button fx:id="registerButton" onAction="#onRegisterClick" prefHeight="34.0" prefWidth="140.0" styleClass="auth-button" text="Register" />
+            </HBox>
+                <Button fx:id="logoutButtonn" onAction="#onLogout" prefHeight="34.0" prefWidth="140.0" styleClass="auth-button" text="Logout" visible="true" />
+
+        </HBox>
+    </top>
+
+
+    <left>
+        <VBox id="sidebar" alignment="TOP_LEFT" spacing="15">
+            <Button fx:id="organizerButton" onAction="#onOrganizerButtonClick" styleClass="nav-button" text="Dashboard" />
+            <Button fx:id="eventsButton" onAction="#onEventsClick" styleClass="nav-button" text="Events" />
+            <Button fx:id="groupButton" onAction="#onGroupButtonClick" styleClass="nav-button" text="Group" />
+            <Button fx:id="jobButton" onAction="#onJobFeedClick" prefHeight="40.0" prefWidth="250.0" styleClass="nav-button" text="Job Feed" />
+            <Button fx:id="createJobButton" onAction="#onCreateJobClick" styleClass="nav-button" text="Create Job" />
+            <Button fx:id="profileButton" onAction="#onProfileClick" styleClass="nav-button" text="Profile" />
+            <Button fx:id="socialButton" mnemonicParsing="false" onAction="#onsocialButtonClick" styleClass="nav-button" text="Feed" />
+            <Button fx:id="MessageButton" onAction="#onMessagerieClick" styleClass="nav-button" text="Messagerie" />
+            <Button fx:id="pointsButton" mnemonicParsing="false" onAction="#onPointClick" styleClass="nav-button" text="Points" />
+            <Button fx:id="chatbotButton" layoutX="30.0" layoutY="295.0" onAction="#onChatbotClick" styleClass="nav-button" text="AI assisatnt" />
+
+        </VBox>
+    </left>
+
+    <center>
+        <VBox id="mainContent" alignment="CENTER" spacing="20">
+            <Label id="heroTitle" prefWidth="963.0" text="Connect Sphere: Your Gateway to Unforgettable Events" />
+            <Label id="heroSubtitle" text="Create, participate, and even work at the events that inspire you." />
+
+            <HBox id="featureCards" alignment="CENTER" spacing="20">
+                <VBox styleClass="feature-card">
+               <ImageView fitHeight="159.0" fitWidth="236.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../../photos/event2.jpeg" />
+                  </image>
+               </ImageView>
+                    <Label styleClass="feature-title" text="Create Events" />
+                    <Label styleClass="feature-description" text="Plan and manage your own events with ease." />
+                </VBox>
+
+                <VBox styleClass="feature-card">
+               <ImageView fitHeight="180.0" fitWidth="242.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../../a.jpg" />
+                  </image>
+               </ImageView>
+                    <Label styleClass="feature-title" text="Find Events" />
+                    <Label styleClass="feature-description" text="Discover exciting events happening near you." />
+                </VBox>
+
+                <VBox styleClass="feature-card">
+               <ImageView fitHeight="174.0" fitWidth="234.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../../photos/event3.jpeg" />
+                  </image>
+               </ImageView>
+                    <Label styleClass="feature-title" text="Work at Events" />
+                    <Label styleClass="feature-description" text="Find job opportunities at various events." />
+                </VBox>
+            </HBox>
+
+            <HBox id="actionButtons" alignment="CENTER" spacing="10">
+                <Button prefHeight="55.0" prefWidth="227.0" styleClass="action-button" text="Explore Events" />
+                <Button prefHeight="55.0" prefWidth="229.0" styleClass="action-button" text="Create an Event" />
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

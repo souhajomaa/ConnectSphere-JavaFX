@@ -1,0 +1,709 @@
+.post-background{
+    -fx-background-color: #fff;
+    -fx-background-radius: 15;
+    -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1) , 5.0, 0.0, 0.0, 5.0);
+}
+
+.reactions-container{
+    -fx-background-color: #fff;
+    -fx-background-radius: 50;
+    -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1) , 5.0, 0.0, 0.0, 5.0);
+    -fx-border-width: 1;
+    -fx-border-color:#B8B9BB;
+    -fx-border-radius: 50;
+}
+
+.top-border{
+    -fx-border-width: 1 0 0 0;
+    -fx-border-color: #606266;
+}
+
+.round-button{
+    -fx-background-color: #F0F2F5;
+    -fx-background-radius: 25;
+
+
+}
+.white-background{
+    -fx-background-color: #fff;
+
+}
+.body-background{
+    -fx-background-color: #F0F2F5;
+}
+.text-field{
+    -fx-background-color: #F0F2F5;
+    -fx-background-radius: 50;
+}
+
+.scroll-pane > .viewport{
+    -fx-background-color: transparent;
+
+}
+/* Ajouter ces styles
+.media-preview {
+    -fx-max-width: 500px;
+    -fx-max-height: 500px;
+    -fx-border-radius: 10px;
+}
+
+.video-container {
+    -fx-background-color: #000;
+}
+.clickable-label {
+    -fx-text-fill: #1877f2;
+    -fx-underline: true;
+    -fx-cursor: hand;
+}
+
+.clickable-label:hover {
+    -fx-text-fill: #165aad;
+}
+/****************************************/
+/* ============================== */
+/*       Styles de la Barre de Navigation */
+/* ============================== */
+#sidebar {
+    -fx-background-color: #1c2b5d; /* biscay - deep navy */
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+    -fx-border-color: #8989ba; /* wild-blue yonder accent */
+    -fx-border-width: 0 1px 0 0;
+}
+
+/* Titre de la barre de navigation */
+#sidebar .title-label {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: 600;
+    -fx-padding: 0 0 15px 0;
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: #8989ba; /* wild-blue yonder */
+}
+
+/* Styles par défaut pour les boutons de la navbar */
+#sidebar #homeButton,
+#sidebar #analyticsButton,
+#sidebar #createJobButton,
+#sidebar #jobFeedButton {
+    -fx-background-color: transparent; /* Fond transparent par défaut */
+    -fx-text-fill: white; /* Texte blanc */
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 4px;
+    -fx-border-width: 0 0 0 3px; /* Bordure à gauche */
+    -fx-border-color: transparent; /* Bordure transparente par défaut */
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s; /* Transition fluide */
+}
+
+/* Effet de survol pour les boutons de la navbar */
+#sidebar #homeButton:hover,
+#sidebar #analyticsButton:hover,
+#sidebar #createJobButton:hover,
+#sidebar #jobFeedButton:hover {
+    -fx-background-color: #1e298f30; /* Fond semi-transparent au survol */
+    -fx-border-color: #8989ba; /* Bordure colorée au survol */
+}
+/* ... other styles */
+.content-scroll {
+    -fx-background: transparent;
+    -fx-padding: 20;
+}
+
+.content-scroll > .viewport {
+    -fx-background-color: #F0F2F5;
+}
+
+.top-bar {
+    -fx-background-color: white;
+    -fx-padding: 10 20;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 8, 0, 0, 4);
+}
+
+.search-input {
+    -fx-background-color: #F0F2F5;
+    -fx-background-radius: 20;
+    -fx-padding: 8 15;
+    -fx-pref-width: 250;
+}
+
+.post-menu {
+    -fx-background-color: transparent;
+}
+
+.post-menu:hover {
+    -fx-background-color: #F0F2F5;
+}
+
+.interaction-button {
+    -fx-spacing: 8;
+    -fx-alignment: center;
+    -fx-padding: 8 12;
+    -fx-cursor: hand;
+}
+
+.interaction-button:hover {
+    -fx-background-color: #F0F2F5;
+    -fx-background-radius: 4;
+}
+
+.reaction-count, .interaction-count {
+    -fx-text-fill: #65676B;
+    -fx-font-size: 13;
+}
+.alert {
+    -fx-background-color: #ffffff; /* Example background color */
+    -fx-border-color: #cccccc; /* Example border color */
+    -fx-border-width: 1;
+    -fx-padding: 20;
+}
+
+.alert .content.label {
+    -fx-font-size: 14; /* Example font size */
+}
+.alert .button-bar {
+    -fx-alignment: CENTER; /* Center buttons */
+}
+
+.alert .button {
+    -fx-background-color: #007bff; /* Example button color */
+    -fx-text-fill: white;
+    -fx-padding: 8 16;
+    -fx-background-radius:5;
+}
+
+
+.white-background{
+    --fxbackground-color: #fff;
+}
+.primary-color{
+    --fxbackground-color: #f4f5f9;
+}
+.shadow{
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0.1),10,0,0,10);
+}
+
+.interaction-button {
+    -fx-background-color: transparent;
+    -fx-padding: 5;
+    -fx-cursor: hand;
+}
+
+.interaction-button:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+.delete-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ff4444;
+}
+
+.delete-button:hover {
+    -fx-background-color: #ffeeee;
+}
+
+
+.liked {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+}
+
+/* Global Styles */
+.root {
+    -fx-background-color: white;
+    -fx-font-family: "Montserrat", "Segoe UI", sans-serif;
+}
+
+/* Top Navigation Bar */
+#topBar {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #1c2b5d, #3d5472);
+    -fx-padding: 15px 25px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 4);
+}
+
+#appTitle {
+    -fx-text-fill: white;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 1, 1);
+}
+
+/* Authentication Buttons */
+.auth-button {
+    -fx-background-color: #d54d67;
+    -fx-text-fill: white;
+    -fx-background-radius: 25px;
+    -fx-padding: 10px 25px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 1, 2);
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s ease;
+}
+
+.auth-button:hover {
+    -fx-background-color: #e85d77;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0, 2, 4);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Sidebar Navigation */
+#sidebar {
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #1c2b5d, #3d5472);
+    -fx-padding: 25px 15px;
+    -fx-spacing: 15px;
+    -fx-pref-width: 250px;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.2), 10, 0, -2, 0);
+}
+
+/*.nav-button {
+    -fx-background-color: rgba(137, 137, 186, 0.3);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-padding: 12px 20px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 1, 1);
+    -fx-min-width: 200px;
+    -fx-max-width: 200px;
+    -fx-alignment: CENTER_LEFT;
+}*/
+
+.nav-button:hover {
+    -fx-background-color: rgba(137, 137, 186, 0.5);
+    -fx-translate-x: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0, 2, 2);
+}
+
+.nav-button:armed, .nav-button:pressed {
+    -fx-background-color: #d54d67;
+}
+
+/* Main Content Area */
+#mainContent {
+    -fx-background-color: white;
+    -fx-padding: 40px;
+}
+
+/* Hero Section */
+#heroTitle {
+    -fx-text-fill: #1c2b5d;
+    -fx-font-size: 36px;
+    -fx-font-weight: 800;
+    -fx-text-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 1, 1);
+}
+
+#heroSubtitle {
+    -fx-text-fill: #6a6a5a;
+    -fx-font-size: 18px;
+    -fx-font-style: italic;
+    -fx-padding: 10px 0 30px 0;
+}
+
+/* Feature Cards with Lighter Background */
+.feature-card {
+    /* Lighter gradient from white to a very light gray */
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #ffffff, #f5f5f7);
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 2, 4);
+    -fx-min-width: 280px;
+    -fx-alignment: center;
+    -fx-transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 15, 0, 4, 8);
+    -fx-translate-y: -5px;
+}
+
+.feature-title {
+    -fx-text-fill: #1c2b5d;  /* Dark color for contrast */
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+    -fx-padding: 5px 0;
+}
+
+.feature-description {
+    -fx-text-fill: #6a6a5a;
+    -fx-font-size: 14px;
+    -fx-text-alignment: center;
+}
+
+/* Action Buttons */
+.action-button {
+    -fx-background-color: #d54d67;
+    -fx-text-fill: white;
+    -fx-background-radius: 30px;
+    -fx-padding: 15px 30px;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 1, 3);
+    -fx-transition: all 0.3s ease;
+}
+
+.action-button:hover {
+    -fx-background-color: #1e298f;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 8, 0, 2, 5);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+#userName {
+    -fx-text-fill: #d54d67; /* Couleur rose-rouge pour correspondre aux boutons d'authentification */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* ============================== */
+/*       Styles PostView - Design Symfony */
+/* ============================== */
+
+/* Sidebar Styles pour PostView */
+.post-view-sidebar {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dbdbdb;
+    -fx-border-width: 0 1 0 0;
+    -fx-min-width: 250px;
+    -fx-max-width: 250px;
+    -fx-padding: 0;
+}
+
+.post-view-sidebar-header {
+    -fx-padding: 20;
+    -fx-alignment: center;
+    -fx-border-color: #dbdbdb;
+    -fx-border-width: 0 0 1 0;
+}
+
+.post-view-sidebar-profile {
+    -fx-padding: 20;
+    -fx-alignment: center;
+    -fx-spacing: 10;
+    -fx-border-color: #dbdbdb;
+    -fx-border-width: 0 0 1 0;
+}
+
+.post-view-sidebar-menu {
+    -fx-spacing: 0;
+}
+
+.post-view-sidebar-menu-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: #262626;
+    -fx-padding: 15 20;
+    -fx-alignment: center-left;
+    -fx-background-radius: 0;
+    -fx-border-width: 0;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-font-weight: 400;
+}
+
+.post-view-sidebar-menu-item:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+.post-view-sidebar-menu-item.active {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #262626;
+    -fx-font-weight: 600;
+}
+
+.post-view-sidebar-menu-item.logout-link {
+    -fx-text-fill: #ed4956;
+}
+
+.post-view-sidebar-menu-item.logout-link:hover {
+    -fx-background-color: #fef7f7;
+}
+
+/* Main Content Styles pour PostView */
+.post-view-main-content {
+    -fx-background-color: #fafafa;
+    -fx-padding: 0;
+}
+
+.post-view-feed-header {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20 30;
+    -fx-border-color: #dbdbdb;
+    -fx-border-width: 0 0 1 0;
+    -fx-alignment: center-left;
+    -fx-spacing: 15;
+}
+
+.post-view-btn-back {
+    -fx-background-color: #0095f6;
+    -fx-text-fill: white;
+    -fx-background-radius: 4;
+    -fx-padding: 8 16;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+}
+
+.post-view-btn-back:hover {
+    -fx-background-color: #1877f2;
+}
+
+/* Post Card Styles pour PostView */
+.post-view-card {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-border-color: #dbdbdb;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-max-width: 600;
+    -fx-min-width: 600;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+.post-view-header {
+    -fx-padding: 16;
+    -fx-spacing: 12;
+    -fx-alignment: center-left;
+    -fx-border-color: #efefef;
+    -fx-border-width: 0 0 1 0;
+}
+
+.post-view-user-info {
+    -fx-spacing: 4;
+}
+
+.post-view-username {
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #262626;
+}
+
+.post-view-date {
+    -fx-font-size: 12px;
+    -fx-text-fill: #8e8e8e;
+}
+
+.post-view-options {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 8;
+    -fx-background-radius: 50;
+    -fx-border-width: 0;
+    -fx-text-fill: #262626;
+    -fx-font-size: 16px;
+}
+
+.post-view-options:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+/* Post Image Styles pour PostView */
+.post-view-image {
+    -fx-background-color: #f0f0f0;
+}
+
+/* Post Actions Styles pour PostView */
+.post-view-actions {
+    -fx-spacing: 12;
+    -fx-padding: 16;
+}
+
+.post-view-action-buttons {
+    -fx-spacing: 16;
+    -fx-alignment: center-left;
+}
+
+.post-view-btn-icon {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+    -fx-font-size: 24px;
+    -fx-text-fill: #262626;
+}
+
+.post-view-btn-icon:hover {
+    -fx-opacity: 0.7;
+}
+
+/* Like button active state */
+.post-view-btn-icon.liked {
+    -fx-text-fill: #ed4956;
+}
+
+/* Save button active state */
+.post-view-btn-icon.saved {
+    -fx-text-fill: #262626;
+}
+
+/* Post Content Styles pour PostView */
+.post-view-text-content {
+    -fx-spacing: 8;
+    -fx-padding: 0 16;
+}
+
+.post-view-likes-count {
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #262626;
+}
+
+.post-view-content-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #262626;
+    -fx-wrap-text: true;
+}
+
+/* Comments Styles pour PostView */
+.post-view-comments-link {
+    -fx-background-color: transparent;
+    -fx-text-fill: #8e8e8e;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-padding: 0;
+    -fx-alignment: center-left;
+    -fx-border-width: 0;
+}
+
+.post-view-comments-link:hover {
+    -fx-text-fill: #262626;
+}
+
+.post-view-comments-container {
+    -fx-spacing: 12;
+    -fx-padding: 16;
+    -fx-border-color: #efefef;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* Comment Input Styles pour PostView */
+.post-view-comment-input {
+    -fx-spacing: 12;
+    -fx-alignment: center-left;
+    -fx-padding: 12 16;
+    -fx-border-color: #efefef;
+    -fx-border-width: 1 0 0 0;
+}
+
+.post-view-comment-field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-text-fill: #262626;
+    -fx-prompt-text-fill: #8e8e8e;
+}
+
+.post-view-comment-field:focused {
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}
+
+/* Post Comment Button pour PostView */
+.post-view-comment-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #0095f6;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-cursor: hand;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+}
+
+.post-view-comment-btn:hover {
+    -fx-text-fill: #1877f2;
+}
+
+.post-view-comment-btn:disabled {
+    -fx-text-fill: #c7c7c7;
+    -fx-cursor: default;
+}
+
+/* Dropdown Menu Styles pour PostView */
+.post-view-dropdown-menu {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-border-color: rgba(0,0,0,0.1);
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-min-width: 180px;
+}
+
+.post-view-dropdown-item {
+    -fx-padding: 8 15;
+    -fx-background-color: transparent;
+    -fx-text-fill: #262626;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+    -fx-alignment: center-left;
+}
+
+.post-view-dropdown-item:hover {
+    -fx-background-color: #f8f9fa;
+}
+
+.post-view-dropdown-item.text-danger {
+    -fx-text-fill: #ed4956;
+}
+
+.post-view-dropdown-item.text-danger:hover {
+    -fx-background-color: #fff5f5;
+}
+
+/* Scrollbar styling pour PostView */
+.post-view-scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.post-view-scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.post-view-scroll-pane .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 8px;
+}
+
+.post-view-scroll-pane .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+}
+
+.post-view-scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: #c7c7c7;
+    -fx-background-radius: 4px;
+}
+
+.post-view-scroll-pane .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #8e8e8e;
+}
+
+/* Focus styles for accessibility pour PostView */
+.post-view-btn-back:focused,
+.post-view-btn-icon:focused,
+.post-view-sidebar-menu-item:focused,
+.post-view-options:focused {
+    -fx-border-color: #0095f6;
+    -fx-border-width: 2;
+    -fx-border-radius: 4;
+}
+
+/* Animation effects pour PostView */
+.post-view-btn-icon {
+    -fx-transition: opacity 0.2s ease;
+}
+
+.post-view-sidebar-menu-item {
+    -fx-transition: background-color 0.2s ease;
+}
+
+.post-view-options {
+    -fx-transition: background-color 0.2s ease;
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+
+<VBox fx:id="dropdownContainer" maxHeight="300" prefWidth="300"
+      style="-fx-background-color: white; -fx-background-radius: 0 0 8 8; -fx-border-radius: 0 0 8 8; -fx-border-color: #e0e0e0; -fx-border-width: 0 1 1 1; -fx-translate-y: 40; -fx-view-order: -999999; -fx-z-index: 999999; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0.5, 0, 3);"
+      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.example.projetjavafx.root.social.UserSearchDropdownController"
+      AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+    
+    <effect>
+        <DropShadow color="#00000055" radius="8" spread="0.1" />
+    </effect>
+    
+    <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-padding: 0;" maxHeight="300">
+        <VBox fx:id="resultsContainer" spacing="2">
+            <!-- User search results will be added here dynamically -->
+        </VBox>
+    </ScrollPane>
+    
+    <Label fx:id="noResultsLabel" text="No users found" alignment="CENTER" managed="false" visible="false"
+           style="-fx-padding: 15; -fx-font-size: 13px; -fx-text-fill: #666;" />
+</VBox>

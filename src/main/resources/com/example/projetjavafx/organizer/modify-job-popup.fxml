@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="525" prefWidth="960" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.projetjavafx.root.organizer.ModifyJobController"
+            stylesheets="@css/modifyJob.css">
+
+    <!-- Left Sidebar (only with title) -->
+    <left>
+        <VBox fx:id="sidebar" prefWidth="180.0" styleClass="sidebar">
+            <Label fx:id="sidebarTitle" text="Job Management" styleClass="sidebar-title"/>
+        </VBox>
+    </left>
+
+    <!-- Center: Modify Job Form -->
+    <center>
+        <VBox fx:id="contentContainer" spacing="15" styleClass="content-container">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Label text="Modify Job Post" styleClass="form-title"/>
+
+            <Label text="Job Title:" styleClass="form-label"/>
+            <TextField fx:id="titleField" styleClass="form-field"/>
+
+            <Label text="Event Title:" styleClass="form-label"/>
+            <TextField fx:id="eventTitleField" styleClass="form-field"/>
+
+            <Label text="Job Location:" styleClass="form-label"/>
+            <TextField fx:id="locationField" styleClass="form-field"/>
+
+            <Label text="Employment Type:" styleClass="form-label"/>
+            <TextField fx:id="employmentField" styleClass="form-field"/>
+
+            <Label text="Application Deadline:" styleClass="form-label"/>
+            <TextField fx:id="deadlineField" styleClass="form-field"/>
+
+            <Label text="Min Salary:" styleClass="form-label"/>
+            <TextField fx:id="minSalaryField" styleClass="form-field"/>
+
+            <Label text="Max Salary:" styleClass="form-label"/>
+            <TextField fx:id="maxSalaryField" styleClass="form-field"/>
+
+            <Label text="Currency:" styleClass="form-label"/>
+            <TextField fx:id="currencyField" styleClass="form-field"/>
+
+            <Label text="Job Description:" styleClass="form-label"/>
+            <TextField fx:id="descriptionField" styleClass="form-field"/>
+
+            <Label text="Recruiter Name:" styleClass="form-label"/>
+            <TextField fx:id="recruiterNameField" styleClass="form-field"/>
+
+            <Label text="Recruiter Email:" styleClass="form-label"/>
+            <TextField fx:id="recruiterEmailField" styleClass="form-field"/>
+
+            <Button text="Save" onAction="#handleSave" styleClass="save-button"/>
+        </VBox>
+    </center>
+</BorderPane>

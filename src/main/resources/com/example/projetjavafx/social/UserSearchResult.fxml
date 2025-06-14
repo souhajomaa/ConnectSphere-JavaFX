@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+
+<HBox fx:id="userContainer" alignment="CENTER_LEFT" spacing="15" styleClass="user-result-item" 
+      onMouseClicked="#onUserClicked" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.example.projetjavafx.root.social.UserSearchResultController"
+      style="-fx-background-color: white; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #e0e0e0; -fx-border-width: 1;">
+    <padding>
+        <Insets top="12" right="15" bottom="12" left="15" />
+    </padding>
+    
+    <effect>
+        <DropShadow color="#00000022" radius="4" spread="0.05" />
+    </effect>
+    
+    <ImageView fx:id="userProfileImage" fitHeight="60" fitWidth="60" preserveRatio="true" />
+    
+    <VBox alignment="CENTER_LEFT" spacing="5" HBox.hgrow="ALWAYS">
+        <Label fx:id="usernameLabel" styleClass="username-label" 
+               style="-fx-font-weight: bold; -fx-text-fill: #2469b2; -fx-font-size: 14px;" />
+        <Label fx:id="emailLabel" styleClass="email-label" 
+               style="-fx-text-fill: #666; -fx-font-size: 12px;" />
+    </VBox>
+    
+    <Button text="View Profile" styleClass="view-profile-btn" 
+            style="-fx-background-color: #d34e68; -fx-text-fill: white; -fx-background-radius: 4; -fx-font-weight: bold;" 
+            onAction="#onUserClicked" />
+</HBox>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="1050" prefWidth="1920" stylesheets="@css/orgnaizer.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetjavafx.root.organizer.OrganizerController">
+    <!-- Left Sidebar -->
+    <left>
+        <VBox fx:id="sidebar" prefHeight="1050.0" prefWidth="250.0">
+            <!-- Application Title -->
+            <Label fx:id="appTitle" prefHeight="45.0" prefWidth="229.0" text="Your Posts" />
+            <!-- Navigation Buttons -->
+            <VBox id="sidebar" prefHeight="826.0" prefWidth="220.0">
+                <Button fx:id="homeButton" onAction="#handleHomeButton" prefHeight="38.0" prefWidth="213.0" styleClass="nav-button" text="Home" />
+                <Button fx:id="analyticsButton" onAction="#onAnalyticsClick" prefHeight="38.0" prefWidth="227.0" styleClass="nav-button" text="Analytics" />
+                <Button fx:id="createEventButton" onAction="#onCreateEventClick" prefHeight="38.0" prefWidth="213.0" styleClass="nav-button" text="Create Event" />
+                <Button fx:id="createJobButton" onAction="#onCreateJobClick" prefHeight="38.0" prefWidth="223.0" styleClass="nav-button" text="Create Job Post" />
+                <Button fx:id="jobFeedButton" onAction="#onJobFeedButtonClick" prefHeight="38.0" prefWidth="241.0" styleClass="nav-button" text="Job Feed" />
+                <Button fx:id="reviewApplicationsButton" onAction="#onReviewApplicationsButtonClick" prefHeight="38.0" prefWidth="211.0" styleClass="nav-button" text="Review Applications" />
+                <Button fx:id="appliedAtButton" onAction="#onAppliedAtButtonClick" prefHeight="0.0" prefWidth="200.0" styleClass="nav-button" text="Applied At" />
+            </VBox>
+        </VBox>
+    </left>
+    <!-- Center Content -->
+    <center>
+        <ScrollPane fitToHeight="true" fitToWidth="true">
+            <VBox fx:id="contentContainer">
+                <!-- Event Management Section -->
+                <VBox fx:id="eventSection">
+                    <HBox fx:id="eventHeader" spacing="10">
+                        <Label fx:id="eventLabel" text="Event Management" />
+                        <Button fx:id="newEventButton" onAction="#onCreateEventClick" text="+ New Event" />
+                        <Button fx:id="refreshEventButton" onAction="#onRefreshEvents" text="Refresh" />
+                    </HBox>
+                    <TableView fx:id="eventsTable">
+                        <columns>
+                            <TableColumn fx:id="eventNameColumn" text="Name" />
+                            <TableColumn fx:id="eventDescColumn" text="Description" />
+                            <TableColumn fx:id="eventStartColumn" text="Start Time" />
+                            <TableColumn fx:id="eventEndColumn" text="End Time" />
+                            <TableColumn fx:id="eventLocationColumn" text="Location" />
+                            <!-- For cells that will contain action buttons, use cell factories to set IDs such as deleteEventButton and modifyEventButton -->
+                            <TableColumn fx:id="deleteEventColumn" text="Delete" />
+                            <TableColumn fx:id="modifyEventColumn" text="Modify" />
+                        </columns>
+                    </TableView>
+                </VBox>
+                <!-- Job Management Section -->
+                <VBox fx:id="jobSection">
+                    <HBox fx:id="jobHeader" spacing="10">
+                        <Label fx:id="jobLabel" text="Job Post Management" />
+                        <Button fx:id="newJobPostButton" onAction="#onNewJobPostClick" text="+ New Job Post" />
+                        <Button fx:id="refreshJobButton" onAction="#onRefreshJobs" text="Refresh" />
+                    </HBox>
+                    <TableView fx:id="jobsTable">
+                        <columns>
+                            <TableColumn fx:id="jobTitleColumn" text="Job Title" />
+                            <TableColumn fx:id="eventTitleColumn" text="Event Title" />
+                            <TableColumn fx:id="jobLocationColumn" text="Location" />
+                            <TableColumn fx:id="employmentTypeColumn" text="Employment Type" />
+                            <TableColumn fx:id="applicationDeadlineColumn" text="Deadline" />
+                            <TableColumn fx:id="minSalaryColumn" text="Min Salary" />
+                            <TableColumn fx:id="maxSalaryColumn" text="Max Salary" />
+                            <TableColumn fx:id="currencyColumn" text="Currency" />
+                            <TableColumn fx:id="jobDescColumn" text="Description" />
+                            <TableColumn fx:id="recruiterNameColumn" text="Recruiter Name" />
+                            <TableColumn fx:id="recruiterEmailColumn" text="Recruiter Email" />
+                            <TableColumn fx:id="createdAtColumn" text="Created At" />
+                            <!-- For cells that will contain action buttons, use cell factories to set IDs such as deleteJobButton and modifyJobButton -->
+                            <TableColumn fx:id="deleteJobColumn" text="Delete" />
+                            <TableColumn fx:id="modifyJobColumn" text="Modify" />
+                        </columns>
+                    </TableView>
+                </VBox>
+                <!-- Participant Management Section -->
+                <VBox fx:id="participantSection" spacing="10">
+                    <HBox fx:id="participantHeader" spacing="10">
+                        <Label fx:id="participantLabel" text="Participant Management" />
+                        <ComboBox fx:id="eventDropdown" prefWidth="200" promptText="Select Event" />
+                        <Button fx:id="refreshParticipantsButton" onAction="#onRefreshParticipants" text="Refresh" />
+                    </HBox>
+                    <TableView fx:id="participantsTable">
+                        <columns>
+                            <TableColumn fx:id="participantNameColumn" text="Name" />
+                            <TableColumn fx:id="participantAgeColumn" text="Age" />
+                            <TableColumn fx:id="participantGenderColumn" text="Gender" />
+                            <!-- For cells that will contain action buttons, use cell factories to set IDs such as deleteParticipantButton -->
+                            <TableColumn fx:id="deleteParticipantColumn" text="Delete" />
+                        </columns>
+                    </TableView>
+                </VBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

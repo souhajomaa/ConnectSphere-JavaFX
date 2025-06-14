@@ -1,0 +1,209 @@
+/* ============================== */
+/*       General Styles           */
+/* ============================== */
+.root {
+    -fx-background-color: #f5f5f5; /* Light gray background */
+    -fx-font-family: "Arial", sans-serif;
+}
+
+/* ============================== */
+/*       Styles for All Buttons   */
+/* ============================== */
+.button {
+    -fx-background-color: transparent; /* Transparent background by default */
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 14px;
+    -fx-padding: 8px 12px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-transition: 0.3s;
+}
+
+/* ============================== */
+/*       Title and Search Bar     */
+/* ============================== */
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333; /* Dark gray text */
+}
+
+#searchField {
+    -fx-pref-height: 35px;
+    -fx-pref-width: 300px;
+    -fx-padding: 5px;
+    -fx-border-color: #ccc; /* Light gray border */
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+#searchField:focused {
+    -fx-border-color: #0078D7; /* Blue border when focused */
+}
+
+/* ============================== */
+/*       "New Group" Button       */
+/* ============================== */
+.new-group-button {
+    -fx-background-color: #1c2b5d; /* Deep navy blue */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 12px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-transition: 0.3s;
+}
+
+.new-group-button:hover {
+    -fx-background-color: #1e298f; /* Darker blue on hover */
+}
+
+/* ============================== */
+/*       Group List Container     */
+/* ============================== */
+#groupsContainer {
+    -fx-padding: 20px;
+}
+
+/* ============================== */
+/*       Group Cards              */
+/* ============================== */
+.group-card {
+    -fx-pref-width: 300px;
+    -fx-pref-height: 200px;
+    -fx-padding: 15px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-background-color: white; /* White background */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 5); /* Shadow effect */
+    -fx-alignment: center;
+    -fx-transition: 0.3s;
+}
+
+.group-card:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 15, 0, 0, 8); /* Enhanced shadow on hover */
+}
+
+/* ============================== */
+/*       Group Image              */
+/* ============================== */
+.group-image {
+    -fx-border-radius: 10px;
+}
+
+/* ============================== */
+/*       Group Description        */
+/* ============================== */
+.group-description {
+    -fx-font-size: 14px;
+    -fx-text-alignment: center;
+    -fx-text-fill: #6a6a5a; /* Gray text */
+}
+
+/* ============================== */
+/*       Group Buttons            */
+/* ============================== */
+.group-buttons {
+    -fx-spacing: 10;
+    -fx-alignment: center;
+}
+
+/* --- "View Details" Button --- */
+.group-button {
+    -fx-background-color: #d54d67; /* Red */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 12px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-transition: 0.3s;
+}
+
+.group-button:hover {
+    -fx-background-color: #b03c54; /* Darker red on hover */
+}
+
+/* --- "Add Member" Button --- */
+.group-button-secondary {
+    -fx-background-color: #1c2b5d; /* Deep navy blue */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 12px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-transition: 0.3s;
+}
+
+.group-button-secondary:hover {
+    -fx-background-color: #3d5472; /* Darker blue on hover */
+}
+
+/* ============================== */
+/*       Navigation Bar Styles    */
+/* ============================== */
+/* Sidebar Navigation - Already Correct */
+#sidebar {
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #1c2b5d, #3d5472);
+    -fx-padding: 25px 15px;
+    -fx-spacing: 20px;
+    -fx-pref-width: 250px;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.2), 10, 0, -2, 0);
+}
+
+.nav-button {
+    -fx-background-color: rgba(137, 137, 186, 0.3);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-padding: 15px 20px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 1, 1);
+    -fx-min-width: 200px;
+    -fx-max-width: 200px;
+    -fx-alignment: CENTER_LEFT;
+     -fx-margin: 5px 0; /* Added margin for better spacing control */
+}
+
+.nav-button:hover {
+    -fx-background-color: rgba(137, 137, 186, 0.5);
+    -fx-translate-x: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0, 2, 2);
+}
+
+.nav-button:armed, .nav-button:pressed {
+    -fx-background-color: #d54d67;
+}
+/* ============================== */
+/*       Alert Dialog Styles      */
+/* ============================== */
+.alert {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #cccccc; /* Light gray border */
+    -fx-border-width: 1;
+    -fx-padding: 20;
+}
+
+.alert .content.label {
+    -fx-font-size: 14px; /* Font size for alert content */
+}
+
+.alert .button-bar {
+    -fx-alignment: CENTER; /* Center buttons */
+}
+
+.alert .button {
+    -fx-background-color: #007bff; /* Blue button */
+    -fx-text-fill: white;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 5px;
+}
+
+
+

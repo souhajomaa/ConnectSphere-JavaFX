@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="525" prefWidth="960" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.projetjavafx.root.organizer.ModifyEventController"
+            stylesheets="@css/modifyEvent.css">
+
+    <!-- Left Sidebar (only with title) -->
+    <left>
+        <VBox fx:id="sidebar" prefWidth="180.0" styleClass="sidebar">
+            <Label fx:id="sidebarTitle" text="Your Posts" styleClass="sidebar-title"/>
+        </VBox>
+    </left>
+
+    <!-- Center: Modify Event Form -->
+    <center>
+        <VBox fx:id="contentContainer" spacing="15" styleClass="content-container">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Label text="Modify Event" styleClass="form-title"/>
+
+            <Label text="Name:" styleClass="form-label"/>
+            <TextField fx:id="nameField" styleClass="form-field"/>
+
+            <Label text="Description:" styleClass="form-label"/>
+            <TextField fx:id="descField" styleClass="form-field"/>
+
+            <Label text="Start Time:" styleClass="form-label"/>
+            <TextField fx:id="startField" styleClass="form-field"/>
+
+            <Label text="End Time:" styleClass="form-label"/>
+            <TextField fx:id="endField" styleClass="form-field"/>
+
+            <Label text="Location:" styleClass="form-label"/>
+            <TextField fx:id="locationField" styleClass="form-field"/>
+
+            <Button text="Save" onAction="#handleSave" styleClass="save-button"/>
+        </VBox>
+    </center>
+</BorderPane>

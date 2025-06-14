@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" prefHeight="800" prefWidth="1000" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.projetjavafx.root.social.SocialController">
+   <!-- Hidden elements for controller compatibility -->
+   <fx:define>
+      <ImageView fx:id="userProfilePic2" fitHeight="40" fitWidth="40" visible="false" managed="false" />
+   </fx:define>
+
+   <top>
+      <HBox id="topBar" alignment="CENTER_LEFT" spacing="15">
+         <Label id="appTitle" text="Connect Sphere" />
+         <TextField fx:id="userSearchField" promptText="Rechercher des utilisateurs..." prefWidth="200.0" />
+         <Pane HBox.hgrow="ALWAYS" />
+         <Button fx:id="logoutButtonn" onAction="#onLogout" prefHeight="34.0" prefWidth="140.0" styleClass="auth-button" text="Logout" visible="true" />
+      </HBox>
+   </top>
+
+   <!-- Barre latérale gauche (style Instagram) -->
+   <left>
+      <VBox id="sidebar" alignment="TOP_LEFT" spacing="15">
+         
+         <!-- Profil utilisateur -->
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <padding>
+               <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+            <ImageView fx:id="userProfilePic" fitHeight="80" fitWidth="80" />
+            <VBox>
+               <Label fx:id="userName" />
+            </VBox>
+         </HBox>
+         
+         <!-- Menu de navigation -->
+         <Button fx:id="organizerButton" onAction="#onOrganizerButtonClick" styleClass="nav-button" text="Dashboard" />
+         <Button fx:id="eventsButton" onAction="#onEventsClick" styleClass="nav-button" text="Events" />
+         <Button fx:id="groupButton" onAction="#onGroupButtonClick" styleClass="nav-button" text="Group" />
+         <Button fx:id="jobButton" onAction="#onJobFeedClick" prefHeight="40.0" prefWidth="250.0" styleClass="nav-button" text="Job Feed" />
+         <Button fx:id="createJobButton" onAction="#onCreateJobClick" styleClass="nav-button" text="Create Job" />
+         <Button fx:id="profileButton" onAction="#onProfileClick" styleClass="nav-button" text="Profile" />
+         <Button fx:id="followRequestsButton" onAction="#onFollowRequestsClick" styleClass="nav-button" text="Follow Requests" />
+         <Button fx:id="chatbotButton" onAction="#onChatbotClick" styleClass="nav-button" text="AI assisatnt" />
+      </VBox>
+   </left>
+
+   <!-- Contenu principal -->
+   <center>
+      <VBox>
+         <!-- En-tête du profil utilisateur -->
+         <VBox styleClass="profile-header" style="-fx-background-color: white; -fx-padding: 20; -fx-border-color: #dbdbdb; -fx-border-width: 0 0 1 0;">
+            <HBox spacing="20" alignment="CENTER_LEFT">
+               <!-- Profile Image -->
+               <ImageView fx:id="profileImage" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/userprofile.png" />
+                  </image>
+               </ImageView>
+               
+               <!-- User Info -->
+               <VBox spacing="10">
+                  <HBox spacing="15" alignment="CENTER_LEFT">
+                     <Label fx:id="profileNameLabel" text="Username" style="-fx-font-weight: bold; -fx-font-size: 24px;" />
+                     <Button fx:id="followButton" text="Follow" onAction="#handleFollowButton" style="-fx-background-color: #1c2b5d; -fx-text-fill: white; -fx-background-radius: 4;" />
+                     <Button text="Message" onAction="#handleMessageButton" style="-fx-background-color: #d34e68; -fx-text-fill: white; -fx-background-radius: 4;" />
+                  </HBox>
+                  
+                  <HBox spacing="20" alignment="CENTER_LEFT">
+                     <Label fx:id="postCountLabel" text="Posts: 0" />
+                     <Label fx:id="followersCountLabel" text="Followers: 0" />
+                     <Label fx:id="followingCountLabel" text="Following: 0" />
+                  </HBox>
+                  
+                  <Label fx:id="profileEmailLabel" text="Email" style="-fx-font-size: 14px;" />
+                  <Label fx:id="profileBioLabel" text="Bio" wrapText="true" style="-fx-font-size: 14px;" />
+               </VBox>
+            </HBox>
+         </VBox>
+         
+         <!-- Séparateur -->
+         <Separator />
+
+         <!-- Ajouter la zone de création de post -->
+         <!-- Post Creation Area (initially hidden for non-members) -->
+         <VBox fx:id="postCreationArea" spacing="10" styleClass="post-creation-area" visible="false" managed="false"
+               style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #DBDBDB; -fx-border-radius: 10;">
+            <Label text="Create Post" styleClass="section-title" style="-fx-font-weight: bold;" />
+            <TextArea fx:id="newPostContent" promptText="What's on your mind?" wrapText="true" prefRowCount="3" />
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+               <Button onAction="#handleSelectImage" text="Add Image" styleClass="group-button-secondary" />
+               <Button onAction="#handleCreatePost" text="Post" styleClass="group-button" />
+            </HBox>
+         </VBox>
+         <!-- En-tête avec titre "Posts" -->
+         <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-background-color: white; -fx-padding: 10; -fx-border-color: #dbdbdb; -fx-border-width: 0 0 1 0;">
+            <Label text="Posts" style="-fx-font-weight: bold;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            
+            <Pane HBox.hgrow="ALWAYS" />
+            
+            <!-- Bouton pour retourner au feed principal -->
+
+            <Button onAction="#onsocialButtonClick" text="Back to Feed" styleClass="group-button" style="-fx-background-color: #1c2b5d; -fx-text-fill: white; -fx-background-radius: 4;" />
+         </HBox>
+         
+         <!-- Conteneur de posts (FlowPane pour ressembler aux événements) -->
+         <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-padding: 0;">
+            <FlowPane fx:id="postsContainer" hgap="20" vgap="20" alignment="TOP_CENTER" style="-fx-padding: 20; -fx-background-color: transparent; -fx-pref-width: 100%; -fx-min-width: 800px;">
+               <!-- Les posts seront ajoutés ici dynamiquement -->
+            </FlowPane>
+         </ScrollPane>
+      </VBox>
+   </center>
+   
+   <!-- Styles CSS -->
+   <stylesheets>
+      <URL value="@css/instagram.css" />
+   </stylesheets>
+</BorderPane>

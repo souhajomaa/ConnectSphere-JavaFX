@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+
+
+<VBox alignment="CENTER" spacing="15" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.projetjavafx.root.group.GroupDetailsController"
+      stylesheets="@css/group_profile.css"
+      styleClass="popup-card">
+
+
+    <ImageView fx:id="groupImage" fitWidth="300" preserveRatio="true" styleClass="popup-image"/>
+    <Label fx:id="groupName" styleClass="popup-title"/>
+    <Text fx:id="groupDescription" styleClass="popup-text"/>
+    <Text fx:id="groupRules" styleClass="popup-text"/>
+
+    <Button text="Close" onAction="#closeWindow" styleClass="popup-button"/>
+
+
+</VBox>

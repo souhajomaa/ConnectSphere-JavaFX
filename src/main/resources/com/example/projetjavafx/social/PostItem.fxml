@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+
+<VBox prefWidth="350" prefHeight="450" styleClass="post-background"
+      style="-fx-background-color: white; -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 12, 0, 0, 6); -fx-padding: 0; -fx-spacing: 0;"
+      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.projetjavafx.root.social.PostItemController">
+
+    <!-- En-tête du post avec avatar et nom d'utilisateur -->
+    <HBox alignment="CENTER_LEFT" spacing="12" style="-fx-padding: 15 20 10 20; -fx-background-color: transparent;">
+        <StackPane>
+            <Circle fill="#f0f0f0" radius="22" />
+            <ImageView fx:id="userAvatar" fitHeight="40" fitWidth="40" style="-fx-background-radius: 20;">
+                <clip>
+                    <Circle radius="20" />
+                </clip>
+            </ImageView>
+        </StackPane>
+        <VBox spacing="3">
+            <HBox spacing="8" alignment="CENTER_LEFT">
+                <Label fx:id="userName" style="-fx-font-weight: bold; -fx-font-size: 15px; -fx-text-fill: #1c2b5d;" />
+                <Label fx:id="groupNameLabel" styleClass="group-name" visible="false" managed="true" style="-fx-text-fill: #d54d67; -fx-font-style: italic; -fx-font-size: 13px;" />
+            </HBox>
+            <Label fx:id="postTimestamp" style="-fx-text-fill: #8e8e8e; -fx-font-size: 12px;" />
+        </VBox>
+        <Pane HBox.hgrow="ALWAYS" />
+        <Button fx:id="postMenuButton" styleClass="instagram-menu-btn" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-background-radius: 50; -fx-padding: 8;" onAction="#showPostOptions">
+            <graphic>
+                <Label text="⋯" style="-fx-font-weight: normal; -fx-text-fill: #262626; -fx-font-size: 20px; -fx-rotate: 90;" />
+            </graphic>
+        </Button>
+    </HBox>
+
+    <!-- Image principale du post -->
+    <StackPane style="-fx-padding: 0 15 0 15;">
+        <ImageView fx:id="postImage" fitWidth="320" fitHeight="220" preserveRatio="true" style="-fx-background-radius: 10;">
+            <clip>
+                <Rectangle width="320" height="220" arcWidth="20" arcHeight="20" />
+            </clip>
+        </ImageView>
+    </StackPane>
+
+    <!-- Barre d'interactions (likes, commentaires) -->
+    <HBox spacing="12" style="-fx-padding: 12 20 8 20; -fx-alignment: CENTER_LEFT;">
+        <Button fx:id="likeButton" styleClass="interaction-button-modern instagram-like-btn" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-background-radius: 50; -fx-padding: 8; -fx-border-color: transparent; -fx-border-radius: 50; -fx-border-width: 0;" onAction="#toggleLike">
+            <graphic>
+                <HBox spacing="4" alignment="CENTER">
+                    <Label text="♡" style="-fx-font-size: 24px; -fx-text-fill: #262626; -fx-font-weight: normal; -fx-effect: none;" />
+                    <Label fx:id="likeCountInButton" text="" style="-fx-font-size: 11px; -fx-text-fill: #8e8e8e; -fx-font-weight: normal;" visible="false" />
+                </HBox>
+            </graphic>
+        </Button>
+        <Button fx:id="commentButton" styleClass="interaction-button-modern instagram-comment-btn" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-background-radius: 50; -fx-padding: 8; -fx-border-color: transparent; -fx-border-radius: 50; -fx-border-width: 0;" onAction="#toggleCommentInput">
+            <graphic>
+                <Label text="🗨" style="-fx-font-size: 24px; -fx-text-fill: #262626; -fx-font-weight: normal; -fx-effect: none;" />
+            </graphic>
+        </Button>
+        <Button fx:id="shareButton" styleClass="interaction-button-modern instagram-share-btn" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-background-radius: 50; -fx-padding: 8; -fx-border-color: transparent; -fx-border-radius: 50; -fx-border-width: 0;" onAction="#sharePost">
+            <graphic>
+                <Label text="✈" style="-fx-font-size: 24px; -fx-text-fill: #262626; -fx-font-weight: normal; -fx-effect: none; -fx-rotate: -45;" />
+            </graphic>
+        </Button>
+        <Pane HBox.hgrow="ALWAYS" />
+        <Button fx:id="saveButton" styleClass="interaction-button-modern instagram-save-btn" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-background-radius: 50; -fx-padding: 8; -fx-border-color: transparent; -fx-border-radius: 50; -fx-border-width: 0;">
+            <graphic>
+                <Label text="⚑" style="-fx-font-size: 24px; -fx-text-fill: #262626; -fx-font-weight: normal; -fx-effect: none;" />
+            </graphic>
+        </Button>
+    </HBox>
+
+    <!-- Compteur de likes avec design amélioré -->
+    <HBox spacing="8" alignment="CENTER_LEFT" style="-fx-padding: 0 20 8 20;">
+        <Label fx:id="likeCount" style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1c2b5d;" />
+        <Label fx:id="likeUsersPreview" style="-fx-font-size: 12px; -fx-text-fill: #666; -fx-font-style: italic;" />
+    </HBox>
+
+    <!-- Contenu du post avec design enrichi -->
+    <VBox spacing="8" style="-fx-padding: 0 20 12 20; -fx-background-color: rgba(248,249,250,0.3); -fx-background-radius: 12; -fx-border-radius: 12; -fx-margin: 0 15;">
+        <VBox spacing="6" style="-fx-padding: 15;">
+            <HBox spacing="8" alignment="CENTER_LEFT">
+                <Label fx:id="userNameContent" style="-fx-font-weight: bold; -fx-font-size: 15px; -fx-text-fill: #1c2b5d;" />
+                <Label fx:id="postTimeBadge" style="-fx-background-color: rgba(213,77,103,0.1); -fx-text-fill: #d54d67; -fx-font-size: 10px; -fx-padding: 3 8; -fx-background-radius: 10; -fx-font-weight: bold;" text="NEW" visible="false" />
+            </HBox>
+            <Label fx:id="postContent" wrapText="true" style="-fx-font-size: 14px; -fx-text-fill: #2c3e50; -fx-line-spacing: 3; -fx-padding: 5 0;" />
+            <HBox fx:id="hashtagsContainer" spacing="8" style="-fx-padding: 5 0 0 0;" />
+        </VBox>
+    </VBox>
+
+    <!-- Lien vers les commentaires -->
+    <Label fx:id="viewCommentsLink" style="-fx-text-fill: #8e8e8e; -fx-font-size: 13px; -fx-cursor: hand; -fx-padding: 0 20 10 20;" onMouseClicked="#toggleCommentsVisibility" />
+
+    <!-- Conteneur des commentaires -->
+    <VBox fx:id="commentsContainer" spacing="8" visible="false" managed="false" style="-fx-padding: 0 20 10 20; -fx-background-color: #f8f9fa; -fx-background-radius: 0 0 15 15;" />
+
+    <!-- Champ de saisie pour ajouter un commentaire -->
+    <HBox fx:id="commentInputBox" spacing="12" visible="false" managed="false" style="-fx-padding: 10 20 15 20; -fx-background-color: #f8f9fa; -fx-background-radius: 0 0 15 15; -fx-alignment: CENTER_LEFT;">
+        <TextField fx:id="commentField" promptText="Écrire un commentaire..." style="-fx-background-color: white; -fx-background-radius: 20; -fx-padding: 10 15; -fx-border-color: #dee2e6; -fx-border-radius: 20; -fx-font-size: 13px;" HBox.hgrow="ALWAYS" />
+        <Button text="Publier" onAction="#addComment" style="-fx-background-color: #d54d67; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 10 20; -fx-font-size: 13px; -fx-font-weight: bold; -fx-cursor: hand;" />
+    </HBox>
+</VBox>

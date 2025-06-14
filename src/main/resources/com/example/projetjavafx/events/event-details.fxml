@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+
+<?import javafx.scene.layout.HBox?>
+<VBox alignment="CENTER" spacing="15" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.projetjavafx.root.events.EventDetailsController"
+      stylesheets="@css/event-details.css"
+      styleClass="popup-card">
+
+
+    <ImageView fx:id="eventImage" fitWidth="300" preserveRatio="true" styleClass="popup-image"/>
+    <Label fx:id="eventName" styleClass="popup-title"/>
+    <Text fx:id="eventDescription" styleClass="popup-text"/>
+    <Text fx:id="eventDate" styleClass="popup-text"/>
+    <Text fx:id="eventLocation" styleClass="popup-text"/>
+
+    <HBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx/23.0.1">
+        <Button text="Share" onAction="#shareEvent" styleClass="popup-button-share"/>
+        <Button text="Close" onAction="#closeWindow" styleClass="popup-button"/>
+    </HBox>
+</VBox>
+

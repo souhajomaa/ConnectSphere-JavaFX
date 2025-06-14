@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1050" prefWidth="1920" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetjavafx.root.auth.CategorieController">
+   <children>
+      <CheckBox fx:id="music" layoutX="233.0" layoutY="168.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="155.0" text="Music">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="sport" layoutX="233.0" layoutY="281.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="155.0" text="Sport">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="gaming" layoutX="233.0" layoutY="406.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="155.0" text="Gaming">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="education" layoutX="730.0" layoutY="393.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="155.0" text="Education ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="culturel" layoutX="730.0" layoutY="268.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="155.0" text="Cultural">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="social" layoutX="730.0" layoutY="163.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="155.0" text="Social">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="technologique" layoutX="240.0" layoutY="521.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" text="Technology">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <!--      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="149.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">-->
+      <!--         <image>-->
+      <!--            <Image url="@../../../../../../../../../Downloads/des-sports%20(1).png" />-->
+      <!--         </image>-->
+      <!--      </ImageView>-->
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="149.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../photos/music.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="640.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../photos/social.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="149.0" layoutY="419.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../photos/gaming.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="640.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../photos/culturel.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="640.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../photos/education.png" />
+         </image>
+      </ImageView>
+      <!--      <ImageView fitHeight="100.0" fitWidth="116.0" layoutX="143.0" layoutY="526.0" pickOnBounds="true" preserveRatio="true">-->
+      <!--         <image>-->
+      <!--            <Image url="@../../../../../../../../../Pictures/Screenshots/Capture%20d'écran%202025-02-16%20173450.png" />-->
+      <!--         </image>-->
+      <!--      </ImageView>-->
+      <Label layoutX="356.0" layoutY="35.0" prefHeight="93.0" prefWidth="359.0" text="Cathegories" textFill="#e8558b">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Label>
+      <Button fx:id="valide" layoutX="255.0" layoutY="704.0" mnemonicParsing="false" onAction="#onValideClick" prefHeight="35.0" prefWidth="595.0" style="-fx-background-color: #d34e68;" text="Confirm" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="149.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../photos/sport.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="149.0" layoutY="534.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../photos/technoligique.png" />
+         </image>
+      </ImageView>
+
+   </children>
+</AnchorPane>

@@ -1,0 +1,101 @@
+/* Main application styles */
+.root {
+  -fx-font-family: "Montserrat", "Segoe UI", sans-serif;
+  -fx-background-color: #ffffff;
+}
+
+/* Sidebar styles */
+.sidebar {
+  -fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #1c2b5d, #3d5472);
+  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 4);
+  -fx-padding: 20px;
+  -fx-spacing: 15px;
+  -fx-pref-width: 250px;
+}
+
+.header-label {
+  -fx-font-size: 16px;
+  -fx-font-weight: bold;
+  -fx-padding: 5 0 5 0;
+  -fx-text-fill: white;
+}
+
+/* Chat area styles */
+.chat-area {
+  -fx-background-color: #ffffff;
+  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 2, 4);
+}
+
+.chat-header {
+  -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #1c2b5d, #3d5472);
+  -fx-border-color: #6a6a5a;
+  -fx-border-width: 0 0 1 0;
+}
+
+.chat-header-label {
+  -fx-font-size: 18px;
+  -fx-font-weight: bold;
+  -fx-text-fill: white;
+}
+
+.messages-container {
+  -fx-background-color: #f5f5f7;
+}
+
+.message-input-container {
+  -fx-background-color: #f0f2f5;
+  -fx-border-color: #e4e6eb;
+  -fx-border-width: 1 0 0 0;
+}
+
+/* Message styles */
+.sent-message {
+  -fx-background-color: #d54d67;
+  -fx-text-fill: white;
+  -fx-background-radius: 18px;
+  -fx-padding: 10px 15px;
+  -fx-max-width: 300px;
+}
+
+.received-message {
+  -fx-background-color: #e6e6ea;
+  -fx-text-fill: #1c2b5d;
+  -fx-background-radius: 18px;
+  -fx-padding: 10px 15px;
+  -fx-max-width: 300px;
+}
+
+.system-message {
+  -fx-background-color: #d54d67;
+  -fx-text-fill: white;
+  -fx-background-radius: 18px;
+  -fx-padding: 10px 15px;
+  -fx-max-width: 300px;
+  -fx-font-style: italic;
+}
+
+.time-text {
+  -fx-font-size: 10px;
+  -fx-fill: #6a6a5a;
+  -fx-padding: 0 5 0 5;
+}
+
+/* Button styles */
+.send-button {
+  -fx-background-color: #d54d67;
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+  -fx-background-radius: 5px;
+  -fx-padding: 8px 20px;
+  -fx-font-size: 14px;
+  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 1, 2);
+  -fx-cursor: hand;
+  -fx-transition: all 0.2s ease;
+}
+
+.send-button:hover {
+  -fx-background-color: #e85d77;
+  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0, 2, 4);
+  -fx-scale-x: 1.05;
+  -fx-scale-y: 1.05;
+}

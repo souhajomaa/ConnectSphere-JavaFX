@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" prefHeight="800" prefWidth="1000" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.projetjavafx.root.group.GroupFeedController">
+
+   <top>
+      <HBox id="topBar" alignment="CENTER_LEFT" spacing="15">
+         <Label id="appTitle" text="Connect Sphere" />
+         <Pane HBox.hgrow="ALWAYS" />
+         <HBox fx:id="authButtons" alignment="TOP_RIGHT" spacing="15" visible="false">
+            <Button fx:id="loginButton" onAction="#onLoginClick" prefHeight="34.0" prefWidth="141.0" styleClass="auth-button" text="Login" />
+            <Button fx:id="registerButton" onAction="#onRegisterClick" prefHeight="34.0" prefWidth="140.0" styleClass="auth-button" text="Register" />
+         </HBox>
+         <Button fx:id="logoutButtonn" onAction="#onLogout" prefHeight="34.0" prefWidth="140.0" styleClass="auth-button" text="Logout" visible="true" />
+      </HBox>
+   </top>
+
+   <!-- Barre latérale gauche (style Instagram) -->
+   <left>
+      <VBox id="sidebar" alignment="TOP_LEFT" spacing="15">
+         
+         <!-- Profil utilisateur -->
+         <HBox alignment="CENTER_LEFT" spacing="10">
+            <padding>
+               <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+            <ImageView fx:id="userProfilePic" fitHeight="80" fitWidth="80" />
+            <VBox>
+               <Label fx:id="userName"  />
+            </VBox>
+         </HBox>
+         
+         <!-- Menu de navigation -->
+         <Button fx:id="organizerButton" onAction="#onOrganizerButtonClick" styleClass="nav-button" text="Dashboard" />
+         <Button fx:id="eventsButton" onAction="#onEventsClick" styleClass="nav-button" text="Events" />
+         <Button fx:id="groupButton" onAction="#onGroupButtonClick" styleClass="nav-button" text="Group" />
+         <Button fx:id="jobButton" onAction="#onJobFeedClick" prefHeight="40.0" prefWidth="250.0" styleClass="nav-button" text="Job Feed" />
+         <Button fx:id="createJobButton" onAction="#onCreateJobClick" styleClass="nav-button" text="Create Job" />
+         <Button fx:id="profileButton" onAction="#onProfileClick" styleClass="nav-button" text="Profile" />
+         <Button fx:id="chatbotButton" layoutX="30.0" layoutY="295.0" onAction="#onChatbotClick" styleClass="nav-button" text="AI assisatnt" />
+      </VBox>
+   </left>
+
+   <!-- Contenu principal -->
+   <center>
+      <VBox>
+         <!-- En-tête avec barre de recherche -->
+         <HBox alignment="CENTER" spacing="20" style="-fx-background-color: white; -fx-padding: 10; -fx-border-color: #dbdbdb; -fx-border-width: 0 0 1 0;">
+            <Label text="Group Feed" style="-fx-font-weight: bold;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            
+            <Pane HBox.hgrow="ALWAYS" />
+            
+            <!-- Bouton Add Post (visible uniquement pour les membres) -->
+            <Button fx:id="addPostButton" style="-fx-background-color: #0095F6; -fx-text-fill: white; -fx-background-radius: 4; -fx-padding: 8 16;" text="Add Post" onAction="#handleCreatePost" visible="false" managed="false" />
+            
+            <!-- Barre de recherche -->
+            <StackPane>
+                <TextField fx:id="searchField" promptText="Search posts..." style="-fx-background-color: #EFEFEF; -fx-background-radius: 8; -fx-padding: 8;" prefWidth="200" />
+            </StackPane>
+         </HBox>
+         
+         <!-- Conteneur principal avec informations du groupe et posts -->
+         <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-padding: 0;">
+            <VBox spacing="20" style="-fx-padding: 20;">
+                <!-- Group Header -->
+                <VBox styleClass="group-header" spacing="10" style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #DBDBDB; -fx-border-radius: 10;">
+                    <HBox spacing="15" alignment="CENTER_LEFT">
+                        <ImageView fx:id="groupProfileImage" fitHeight="100" fitWidth="100" preserveRatio="true" styleClass="group-profile-image" />
+                        
+                        <VBox spacing="5">
+                            <Label fx:id="groupNameLabel" styleClass="group-name" style="-fx-font-weight: bold; -fx-font-size: 18px;" />
+                            <Label fx:id="groupDescriptionLabel" styleClass="group-description" wrapText="true" />
+                            <HBox spacing="15">
+                                <Label fx:id="memberCountLabel" styleClass="group-stats" />
+                                <Label fx:id="postCountLabel" styleClass="group-stats" />
+                            </HBox>
+                        </VBox>
+                    </HBox>
+                    
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Button fx:id="joinLeaveButton" onAction="#handleJoinLeaveButton" styleClass="group-button" />
+                        
+                        <!-- Admin buttons container (initially hidden) -->
+                        <HBox fx:id="adminButtonsContainer" spacing="10" visible="false" managed="false">
+                            <Button onAction="#handleEditGroup" text="Edit Group" styleClass="group-button-secondary" />
+                            <Button onAction="#handleDeleteGroup" text="Delete Group" styleClass="group-button-secondary" />
+                        </HBox>
+                    </HBox>
+                </VBox>
+                
+                <!-- Post Creation Area (initially hidden for non-members) -->
+                <VBox fx:id="postCreationArea" spacing="10" styleClass="post-creation-area" visible="false" managed="false"
+                      style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #DBDBDB; -fx-border-radius: 10;">
+                    <Label text="Create Post" styleClass="section-title" style="-fx-font-weight: bold;" />
+                    <TextArea fx:id="newPostContent" promptText="What's on your mind?" wrapText="true" prefRowCount="3" />
+                    <HBox spacing="10" alignment="CENTER_RIGHT">
+                        <Button onAction="#handleSelectImage" text="Add Image" styleClass="group-button-secondary" />
+                        <Button onAction="#handleCreatePost" text="Post" styleClass="group-button" />
+                    </HBox>
+                </VBox>
+                
+                <!-- Posts Container -->
+                <FlowPane fx:id="postsContainer" hgap="20" vgap="20" alignment="TOP_CENTER" style="-fx-padding: 20; -fx-background-color: transparent; -fx-pref-width: 100%;">
+                    <!-- Posts will be added here dynamically -->
+                </FlowPane>
+            </VBox>
+         </ScrollPane>
+      </VBox>
+   </center>
+   
+   <stylesheets>
+      <URL value="@../social/css/instagram.css"/>
+      <URL value="@css/group_profile.css"/>
+   </stylesheets>
+</BorderPane>
