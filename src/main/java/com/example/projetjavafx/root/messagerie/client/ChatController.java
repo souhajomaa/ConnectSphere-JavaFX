@@ -4,7 +4,7 @@ import com.example.projetjavafx.root.auth.SessionManager;
 import com.example.projetjavafx.root.messagerie.db.MessageDB;
 import com.example.projetjavafx.root.messagerie.model.Message;
 import com.example.projetjavafx.root.messagerie.model.User;
-import com.example.projetjavafx.root.messagerie.repository.UserDB;
+import com.example.projetjavafx.root.messagerie.db.UserDB;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
